@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+}
+
+h1{
+  position: relative;
+  height: 29px;
+  left: 14%;
+  width: 80%;
+  top: 115px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+
+
+/* 
+.home,
+.about,
+.projects,
+.contact{
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin-left: 70px;
+  padding-right: 70px;
+} */
+
+/* .home {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+} */
+/* .about {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+  
+} */
+
+/* .projects {
+ 
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.contact {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+} */
+

@@ -1,0 +1,10 @@
+.contacts-body{
+    background-color: #E5E5E5;
+}
+.form-container1{
+    position: relative;
+    left: 20rem;
+    display: flex;
+    flex-direction: row;
+
+}
