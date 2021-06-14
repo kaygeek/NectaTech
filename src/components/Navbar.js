@@ -7,17 +7,10 @@ import { Link } from "react-router-dom";
 import logo from "./logo.svg";
 import "./Navbar.css";
 
-
-
-
-
-
 const Navbar = () => {
-
-
   
   const [click, setClick] = useState(false);
-    const [dropdown, setDropdown] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   function handleClick() {
     setClick(!click);
@@ -56,12 +49,12 @@ const Navbar = () => {
     //   </NavbarContainer>
     // </Nav>
 
-    <Navbar className='navbar'>
+    <navbar className='navbar'>
       <div>
 
       </div>
       <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-      <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" />
       </Link>
     {/* Hamburger icon */}
     <div className='menu-icon' onClick={handleClick}>
@@ -105,7 +98,7 @@ const Navbar = () => {
 
       </ul>
 
-    </Navbar>
+    </navbar>
   );
 };
 

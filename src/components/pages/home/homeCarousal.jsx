@@ -22,31 +22,31 @@ function HomeCarousel() {
   return (
     <div>
       <CarouselStyle autoplay>
-   <div className="carousel-container">
-      <p className="description1">
-        <b>NectaTech</b> builds robust and scalable software platforms,
-           geared towards putting the power in the user’s hands.
-      </p>
-      <img className="slide-img1" src={first_slide} alt="laptop" />
-    </div>
+        <div className="carousel-container">
+          <p className="description1">
+            <b>NectaTech</b> builds robust and scalable software platforms,
+               geared towards putting the power in the user’s hands.
+          </p>
+          <img className="slide-img1" src={first_slide} alt="laptop" />
+        </div>
+        <div className="carousel-container">
 
-    <div className="carousel-container">
-    <img className="slide-img2" src={second_slide} alt="laptop" />
-      <p className="description2">
-       We have you covered, from <b>Design</b> through <b>Development</b> and <b>beyond</b>!
-      </p>
-    </div>
+          <img className="slide-img2" src={second_slide} alt="laptop" />
+          <p className="description2">
+           We have you covered, from <b>Design</b> through <b>Development</b> and <b>beyond</b>!
+          </p>
+        </div>
 
-    <div className="carousel-container">
-    <p className="description3">
-        Our Team keeps working to bring the most sustainable and fresh
-        tech to the table to make sure our platforms are sustainable and
-        adaptable.
-    </p>
-    <img className="slide-img3" src={third_slide} alt="laptop" />
-    </div>
+        <div className="carousel-container">
+          <p className="description3">
+              Our Team keeps working to bring the most sustainable and fresh
+              tech to the table to make sure our platforms are sustainable and
+              adaptable.
+          </p>
+          <img className="slide-img3" src={third_slide} alt="laptop" />
+        </div>
 
-  </CarouselStyle>
+      </CarouselStyle>
 
 
       {/* <Carousel autoplay>

@@ -19,18 +19,18 @@ function App() {
     <Router>
       <Navbar />
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/About" component={About} />
-        <Route path="/Projects" component={Projects} />
-        <Route path="/Contact" component={Contact} />
-      </Switch>
-      <Switch>
-      <Route path="/ScrumPro" component={ScrumPro} />
-      <Route path="/PlayPro" component={PlayPro} />
-      <Route path="/NectaTrack" component={NectaTrack} />
-      <Route path="/Necta" component={Necta} />
-      <Route path="/BloomWeddings" component={BloomWeddings} />
+        <Route exact path="/" exact component={Home} />
+        <Route exact path="/About" component={About} />
+        <Route exact path="/Projects" component={Projects} />
+        <Route exact path="/Contact" component={Contact} />
+        <Route exact path="/ScrumPro" component={ScrumPro} />
+        <Route exact path="/PlayPro" component={PlayPro} />
+        <Route exact path="/NectaTrack" component={NectaTrack} />
+        <Route exact path="/Necta" component={Necta} />
+        <Route exact path="/BloomWeddings" component={BloomWeddings} />
+      { /** 
       <Route path='/external' component={() => { window.location = 'https://scrumpro.co.za/'; return null;} }/>
+      */}
       </Switch>
 
       <Footer />
