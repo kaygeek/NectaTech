@@ -1,9 +1,8 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import "./App.css";
-import Home from "./components/pages/home/Home";
-// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Home from "./components/pages/home/Home";
 import About from "./components/pages/about/About";
 import Projects from "./components/pages/projects/Projects";
 import Contact from "./components/pages/concact/Contact";
@@ -28,9 +27,6 @@ function App() {
         <Route exact path="/NectaTrack" component={NectaTrack} />
         <Route exact path="/Necta" component={Necta} />
         <Route exact path="/BloomWeddings" component={BloomWeddings} />
-      { /** 
-      <Route path='/external' component={() => { window.location = 'https://scrumpro.co.za/'; return null;} }/>
-      */}
       </Switch>
 
       <Footer />

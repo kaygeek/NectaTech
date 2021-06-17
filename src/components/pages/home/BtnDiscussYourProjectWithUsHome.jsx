@@ -1,38 +1,51 @@
 import React from "react";
-import ReactDom from 'react-dom';
+import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import { Button } from 'antd';
 
-function BtnDiscussYourProjectWithUs(){
-    return(
-        <div className="button-1">
-        <Link to="/contact">
-          <Button
-            type="primary"
-            size="large"
-            style={{
-              position: "relative",
-              top: "-2px",
-              left: "200px",
-              width: "300px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              background: "#333333",
-              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-              borderRadius: "2px",
-              borderColor: "black",
-              paddingRight: "1rem",
-              zIndex:"10"
-            }}
-            block
-          >
-            Discuss your project with us
-          </Button>
-        </Link>
-      </div>
+const MyButton = styled(Button)`
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ top: -2px;
+ left: 230px;
+ width: 60%;
+ align-items: center;
+ background: #333333;
+ border-radius: 2px;
+ border-color: black;
+ z-index:10;
+ font-size: 18px;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ 
 
-    );
+ @media screen and (max-width:1159px){
+ position: relative;
+ top: -2px;
+ left: 60px;
+ width: 90%;
+ }
+
+ /* @media screen and (max-width:869px){
+  font-size: 15px;
+ } */
+
+`
+
+function BtnDiscussYourProjectWithUs(){
+  return(
+    <div className="button-1">
+      <Link to="/contact">
+        <MyButton
+        type="primary"
+        size="large"
+        block>
+          
+        Discuss your project with us
+      </MyButton>
+    </Link>
+      </div>
+ );
 }
 
 export default BtnDiscussYourProjectWithUs;

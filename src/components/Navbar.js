@@ -1,11 +1,55 @@
 import React, { useState } from "react";
-// import styled from "styled-components";
+import styled from "styled-components";
 // import {FaTimes} from "react-icons/fa";
 // import {FaBars} from "react-icons/fa";
 import { Link } from "react-router-dom";
-// import { Link as linkScroll} from "react-scroll";
 import logo from "./logo.svg";
-import "./Navbar.css";
+
+
+const Nav = styled.nav`
+ display: flex;
+ flex-direction: row;
+ height: 65px;
+ width: 100%;
+ font-size: 1.1rem;
+ background: #ffffff;
+ box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+`
+
+const NavbarLogo = styled(Link)`
+ position: relative;
+ justify-content: left;
+ margin-left: 85px;
+ padding: 10px 8px 5px;
+ width: 320px;
+
+`
+
+
+const NavItems = styled.div`
+ position: relative;
+ justify-content:inline;
+ align-items: center;
+ justify-content:center;
+ display: flex;
+ margin-left: 50%;
+ flex-direction: row;
+ width: 60%;
+ height: 60px;
+ 
+`
+     
+const  NavbarLink = styled(Link)`
+ color: #000000;
+ text-decoration: none;
+ padding: 0.5rem -2rem;
+ display: inline-block;
+ margin-left: -4rem;
+
+`
+
+
 
 const Navbar = () => {
   
@@ -20,85 +64,20 @@ const Navbar = () => {
   }
 
   return (
-    // <Nav>
-    //   <NavbarContainer>
-    //     <NavbarLogo to="/">
-    //       <img src={logo} className="App-logo" alt="logo" />
-    //     </NavbarLogo>
-
-    //     {/* Hamburger icon */}
-    //     <MobileIcon>
-    //       <FaBars />
-          
-    //     </MobileIcon>
-
-    //     <NavMenu>
-    //       <NavbarItem>
-    //         <NavbarLink to="/"> Home </NavbarLink>
-    //       </NavbarItem>
-    //       <NavbarItem>
-    //         <NavbarLink to="about"> About </NavbarLink>
-    //       </NavbarItem>
-    //       <NavbarItem>
-    //         <NavbarLink to="projects"> Projects </NavbarLink>
-    //       </NavbarItem>
-    //       <NavbarItem>
-    //         <NavbarLink to="contact"> Contact </NavbarLink>
-    //       </NavbarItem>
-    //     </NavMenu>
-    //   </NavbarContainer>
-    // </Nav>
-
-    <navbar className='navbar'>
-      <div>
-
-      </div>
-      <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+    <Nav>
+       <NavbarLogo to="/">
         <img src={logo} className="App-logo" alt="logo" />
-      </Link>
-    {/* Hamburger icon */}
-    <div className='menu-icon' onClick={handleClick}>
-      <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-    </div>
+      </NavbarLogo>
 
-      <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-        <li className='nav-item'>
-          <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-            Home
-          </Link>
-        </li>
+       <NavItems>
+        <NavbarLink to="/"> Home </NavbarLink>       
+        <NavbarLink to="about"> About </NavbarLink>      
+        <NavbarLink to="projects"> Projects </NavbarLink>               
+        <NavbarLink to="contact"> Contact </NavbarLink>
+      </NavItems>
+    </Nav>
 
-        <li className='nav-item'>
-          <Link
-            to='/about'
-            className='nav-links'
-            onClick={closeMobileMenu}
-          >
-            About
-          </Link>
-        </li>
-        <li className='nav-item'>
-          <Link
-            to='/projects'
-            className='nav-links'
-            onClick={closeMobileMenu}
-          >
-            Projects
-          </Link>
-        </li>
-        <li className='nav-item'>
-          <Link
-            to='/contact'
-            className='nav-links'
-            onClick={closeMobileMenu}
-          >
-            Contact
-          </Link>
-        </li>
-
-      </ul>
-
-    </navbar>
+ 
   );
 };
 
