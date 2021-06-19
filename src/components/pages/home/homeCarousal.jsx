@@ -10,46 +10,66 @@ import third_slide from "./home_imgs/third_slide.svg";
 
 const CarouselStyle = styled(Carousel)` 
   /* position: relative; */
-  display:flex;
-  flex-direction:row;
   width: 100%;
   height: 350px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
 
+const Frame = styled.div`
+  display: flex !important;
+  width: 100% !important;
+  justify-content: center;
+  align-items: center;
 
+  padding: 40px;
+
+  @media only screen and (max-width: 768px) {
+    padding: 20px 10px;
+  }
+
+  img {
+    width: 50%;
+    max-width: 400px;
+  }
+
+  p {
+    width: 50%;
+    max-width: 500px;
+    font-size: 25px;
+    margin: 0;
+  }
+`
 
 function HomeCarousel() {
   return (
       <CarouselStyle autoplay>
         
-        <div className="flex-container">
-          <p className="description1">
+        <Frame>
+          <p >
             <b>NectaTech</b> builds robust and scalable software platforms,
                geared towards putting the power in the user’s hands.
           </p>
-          <div>
-           <img className="slide-img1" src={first_slide} alt="laptop" />
-          </div>
+           <img src={first_slide} alt="laptop" />
          
-        </div>
-        <div className="carousel-container">
+        </Frame>
 
-          <img className="slide-img2" src={second_slide} alt="laptop" />
-          <p className="description2">
+        <Frame>
+
+          <img src={second_slide} style={{maxWidth: '300px'}} alt="laptop" />
+          <p>
            We have you covered, from <b>Design</b> through <b>Development</b> and <b>beyond</b>!
           </p>
-        </div>
+        </Frame>
 
-        <div className="carousel-container">
-          <p className="description3">
+        <Frame>
+          <p>
               Our Team keeps working to bring the most sustainable and fresh
               tech to the table to make sure our platforms are sustainable and
               adaptable.
           </p>
-          <img className="slide-img3" src={third_slide} alt="laptop" />
-        </div>
+          <img src={third_slide} alt="laptop" />
+        </Frame>
 
         {/* </div> */}
        
