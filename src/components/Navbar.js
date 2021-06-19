@@ -21,8 +21,29 @@ const NavbarLogo = styled(Link)`
  position: relative;
  justify-content: left;
  margin-left: 85px;
- padding: 10px 8px 5px;
+ padding: 10px 12px 5px;
  width: 320px;
+
+
+@media screen and (max-width:1207px){
+  width: 380px;
+}
+
+
+/* @media screen and (max-width:1019px){
+  width: 396px;
+}
+
+
+@media screen and (max-width:921px){
+  width: 408px;
+  padding-right: 9px;
+}
+
+
+@media screen and (max-width:869px){
+  width: 600px;
+} */
 
 `
 

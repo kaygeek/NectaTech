@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 function ProjectsLayout() {
   return (
     <div className="content-body">
-      <div className="projects-description">
+      <div className="projects-container">
         <h1 className="Projects"> Our Projects </h1>
         <p>
           Have a look at some of our projects to see how NectaTech can help you

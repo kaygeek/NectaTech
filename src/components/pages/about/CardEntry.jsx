@@ -3,6 +3,7 @@ import "./HexagonGallery.css";
 import { Card } from 'antd';
 import BtnContactAbout from "./BtnContactAbout.jsx";
 import BtnViewOurProjectsAbout from "./ViewOurProjectsAbout.jsx";
+import img_1 from "./about_images/img_1.svg"
 
 
 
@@ -12,7 +13,7 @@ function CardEntry(props){
         <div>
         <Card style={{marginBottom:"10rem"}} className="card">
           <div className="card-container">
-            {/* <img src={img_1}></img> */}
+            <img src={img_1}></img>
             <div className="card-content">
 
               <div className="title">

@@ -2,11 +2,9 @@ import React from "react";
 import Vector from "./contacts_imgs/Vector.svg";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import 'antd/dist/antd.css';
-// import './index.css';
-import { Form, Input, InputNumber, Button } from 'antd';
+import { Form, Input, Button } from 'antd';
 import { Row, Col } from "antd";
-
+import 'antd/dist/antd.css';
 
 
 const Body = styled.div`
@@ -32,10 +30,12 @@ const FormBody = styled.div`
 const PrivacyTag = styled.div`
  width: 90% ;
  font-size: 1rem ;
+
 `
 
 const PrivacyLink = styled(Link)`
  position: relative;
+
 `
 
 const Content = styled.div`
@@ -53,6 +53,7 @@ ul{
 ul li:before{
  content: "✔️"
 }
+
 `
 
 const ContentList = styled(Link)`

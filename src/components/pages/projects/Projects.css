@@ -26,25 +26,27 @@
   display: block;
   object-fit: cover;
 } */
-.projects-container {
+/* .projects-container {
   width: 100%;
-}
+} */
 .projects-container p{
   position: relative;
-  width: 80%;
+  width: 70%;
   height: 116px;
   left: 14%;
   top: 99px;
   font-style: normal;
   font-weight: normal;
-  font-size: 22px;
-  line-height: 22px;
- 
+  font-size: 21px;
+  line-height: 158%;
   display: flex;
   align-items: center;
   padding-bottom: 5px;
 }
-
+.projects-container h1{
+  position: relative;
+  margin-left: -4rem;
+}
 
 .projects-hex-gallery {
   margin: auto;
@@ -63,13 +65,7 @@
   position: relative;
   width: 156.55px;
   height: 180.71px;
-  -webkit-clip-path: polygon(
-    50% 0%,
-    100% 25%,
-    100% 75%,
-    50% 100%,
-    0% 75%,
-    0% 25%
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%,   0% 75%,  0% 25%
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
