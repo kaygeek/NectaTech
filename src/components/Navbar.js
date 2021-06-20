@@ -14,6 +14,7 @@ const Nav = styled.nav`
  font-size: 1.1rem;
  background: #ffffff;
  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+ z-index: 10px;
 
 `
 
@@ -52,9 +53,8 @@ const NavItems = styled.div`
  position: relative;
  justify-content:inline;
  align-items: center;
- justify-content:center;
+ justify-content: flex-end;
  display: flex;
- margin-left: 50%;
  flex-direction: row;
  width: 60%;
  height: 60px;
@@ -64,9 +64,8 @@ const NavItems = styled.div`
 const  NavbarLink = styled(Link)`
  color: #000000;
  text-decoration: none;
- padding: 0.5rem -2rem;
- display: inline-block;
- margin-left: -4rem;
+ padding: 0;
+ margin: 0px 10px;
 
 
 &:hover {
@@ -91,7 +90,7 @@ const Navbar = () => {
   return (
     <Nav>
        <NavbarLogo to="/">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img height='50px' width='auto' src={logo} className="App-logo" alt="logo" />
       </NavbarLogo>
 
        <NavItems>

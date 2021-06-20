@@ -9,7 +9,7 @@ import third_slide from "./home_imgs/third_slide.svg";
 
 const CarouselStyle = styled(Carousel)` 
   /* position: relative; */
-  width: 100%;
+  max-width: 100vw;
   height: 350px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -45,14 +45,14 @@ function HomeCarousel() {
         <b>NectaTech</b> builds robust and scalable software platforms,
            geared towards putting the power in the user’s hands.
       </p>
-       <img src={first_slide} alt="laptop" />
+      <img src={first_slide} alt="laptop" />
 
     </Frame>
 
     <Frame>
 
       <img src={second_slide} style={{maxWidth: '300px'}} alt="laptop" />
-      <p>
+      <p style={{marginLeft: '15px'}}>
        We have you covered, from <b>Design</b> through <b>Development</b> and <b>beyond</b>!
       </p>
     </Frame>

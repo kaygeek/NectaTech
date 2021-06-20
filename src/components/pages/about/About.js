@@ -6,43 +6,34 @@ import HexagonGallery from "./HexagonGallery.jsx";
 
 
 const AboutBody = styled.div`
- width:100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: center;
+ width: 100%;
  background: #E5E5E5;
 `
 
 const AboutContainer = styled.div`
- width: 73%;
+  width: 73%;
 
-& P{
-  position: relative;
-  top: 110px;
-  left: 18%;
-  height: 116px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 21px;
-  line-height: 158%;
-  display: flex;
-  align-items: center;
-  color: #333333;
-  margin: 0px;
-  padding-bottom: 5px;
-
-@media screen and (max-width:1024px){
-  height: 165px;
-  top: 30px;
-}
-
-  @media screen and (max-width:768px){
-   height: 170spx;
-   top: 30px;
+  h1 {
+    margin: 30px 0;
   }
- @media screen and (max-width:375px){
-  height: 385px;
-  top: 50px;
- }
-  
-}
+
+  & p {
+    height: 116px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 158%;
+    display: flex;
+    align-items: center;
+    color: #333333;
+    margin: 0px;
+    padding-bottom: 5px;
+
+  }
 `
 function About() {
 

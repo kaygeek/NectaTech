@@ -1,41 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0px;
+
+h1, h2, h3, p, span, a {
   font-family: 'Poppins', sans-serif;
-  width: 100%;
-}
-
-h1{
-  position: relative;
-  /* height: 29px; */
-  left: 18%;
-  width: 80%;
-  top: 115px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 3ch;
-  padding-bottom: 1.5rem;
-  line-height: 29px;
-}
-
-@media (max-width:1024px) {
-  h1{
-    position: relative;
-    top:50px;
-  }
-}
-
-@media (max-width:768px){
-  h1{
-    position: relative;
-    top:40px;
-  }
-}
-
-@media (max-width:375px){
-  h1{
-    position: relative;
-    top:30px;
-  }
 }
