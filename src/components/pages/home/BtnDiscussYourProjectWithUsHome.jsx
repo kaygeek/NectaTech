@@ -18,6 +18,10 @@ const MyButton = styled(Button)`
  font-size: 18px;
  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
  
+ &:hover {
+  background: #faed5b;
+  
+}
 
  @media screen and (max-width:1159px){
  position: relative;
@@ -34,7 +38,6 @@ const MyButton = styled(Button)`
 
 function BtnDiscussYourProjectWithUs(){
   return(
-    <div className="button-1">
       <Link to="/contact">
         <MyButton
         type="primary"
@@ -43,8 +46,8 @@ function BtnDiscussYourProjectWithUs(){
           
         Discuss your project with us
       </MyButton>
-    </Link>
-      </div>
+
+    </Link>    
  );
 }
 

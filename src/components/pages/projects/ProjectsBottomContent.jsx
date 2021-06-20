@@ -1,9 +1,10 @@
 import React from "react";
 import "./Projects.css";
 import Group73 from "./projects_images/scrumpro_img/Group73.svg";
-import BtnDiscussYourProjectWithUs from "./BtnDiscussYourProjectWithUs.jsx";
+import BtnDiscussYourProjectWithUs from "./BtnDiscussYourProjectWithUs"
 import BtnViewOurProjects from "./BtnViewOurProjects";
 import styled from "styled-components";
+
 
 
 const Fram = styled.div`
@@ -35,13 +36,10 @@ function ProjectsBottomContent() {
       <div className="vector-structure">
         <BottomVector src={Group73}  alt="vector" />
       </div>
-
-
-
-      <BtnContainer className="flex-container">
+        <BtnContainer className="flex-container">
         <BtnDiscussYourProjectWithUs />
         <BtnViewOurProjects />
-      </BtnContainer>
+        </BtnContainer>
     </Fram>
   );
 

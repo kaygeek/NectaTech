@@ -1,12 +1,3 @@
-// import React from "react";
-// import { Carousel } from "antd";
-// import "antd/dist/antd.css";
-// import "./homeCarouselStyle.css";
-// import styled from 'styled-components';
-// import first_slide from "./home_imgs/first_slide.svg";
-// import second_slide from "./home_imgs/second_slide.svg";
-// import third_slide from "./home_imgs/third_slide.svg";
-// import styled from "styled-components";
 import React from "react";
 import { Carousel } from "antd";
 import "antd/dist/antd.css";

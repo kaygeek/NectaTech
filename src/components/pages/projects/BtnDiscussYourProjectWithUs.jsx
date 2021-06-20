@@ -1,38 +1,46 @@
 import React from "react";
-import ReactDom from 'react-dom';
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import styled from 'styled-components';
 import { Button } from 'antd';
 
-function BtnDiscussYourProjectWithUs(){
-    return(
-        <div className="button-1">
-        <Link to="/contact">
-          <Button
-            type="primary"
-            size="large"
-            style={{
-              position: "relative",
-              top: "300px",
-              left: "200px",
-              width: "300px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              background: "#333333",
-              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-              borderRadius: "2px",
-              borderColor: "black",
-              paddingRight: "1rem",
-              zIndex:"10"
-            }}
-            block
-          >
-            Discuss your project with us
-          </Button>
-        </Link>
-      </div>
+const BtnDiscussProjectWithUs = styled(Button)`
+ position: relative;
+ top: 300px;
+ margin-left: 10rem;
+ width: 320px;
+ box-sizing: border-box;
+ border-radius: 2px;
+ z-index: 1;
+ background: #333333;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ 
+`
 
-    );
+function BtnDiscussYourProjectWithUs(){
+
+  // const history = useHistory();
+
+  // const routeChange = (e) =>{ 
+  //   let path = `/contact`; 
+  //   history.push(path);
+  // }
+
+
+  // onClick={(e)=>this.routeChange}
+
+  return(
+    <Link to="/contact">
+    <BtnDiscussProjectWithUs
+    type="primary"
+    size="large"
+    block>
+      
+    Discuss your project with us
+  </BtnDiscussProjectWithUs>
+
+</Link>   
+ );
 }
 
 export default BtnDiscussYourProjectWithUs;

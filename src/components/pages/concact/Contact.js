@@ -214,9 +214,9 @@ const Contact = () => {
             label="Coutry"
             rules={[{ required: true, message: 'Please select country!' }]} >
               <Select placeholder="Please select country!">
-                <Option value="male">Male</Option>
-                  <Option value="female">Female</Option>
-                <Option value="other">Other</Option>
+                <Option label="male" value="male">Male</Option>
+                <Option  label="female"value="female">Female</Option>
+                <Option label="other"value="other">Other</Option>
               </Select>
           </Form.Item>
           

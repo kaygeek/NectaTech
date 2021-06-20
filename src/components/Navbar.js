@@ -68,6 +68,10 @@ const  NavbarLink = styled(Link)`
  display: inline-block;
  margin-left: -4rem;
 
+
+&:hover {
+  color: #faed5b;
+}
 `
 
 

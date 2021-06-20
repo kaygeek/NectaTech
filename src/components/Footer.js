@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "./logo.svg";
 import styled from "styled-components";
@@ -64,12 +64,15 @@ const MainFooterLink = styled(Link)`
  display: inline-block;
  margin-left: -6rem;
 
-
+ &:hover {
+  color: #faed5b;
+}
  @media screen and (max-width:984px){
    position: relative;
    left: -12rem;
    padding: 0.5rem -1rem;
    margin-left: 0px;
+
   }
 
 `
@@ -153,6 +156,10 @@ const ChildFooterLink = styled(Link)`
  padding: 0.5rem -2rem;
  display: inline-block;
  margin-left: -15rem;
+
+ &:hover {
+  color: #faed5b;
+}
 
 @media screen and (max-width:677px){
  margin-left:6rem;

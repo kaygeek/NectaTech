@@ -1,13 +1,4 @@
-
-.hex img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit:cover;
-  }
-
-  
-  .hex:first-child {
+    .hex:first-child {
     grid-row-start: 1;
     grid-column: 2 / span 2;
   }
