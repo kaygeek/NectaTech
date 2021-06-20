@@ -23,10 +23,10 @@ const TopVector = styled.div`
 
 const Logo = styled.img`
   position: relative;
-  top: -80px;
-  margin-left: 200px;
-  width: 350px;
-  height: 80px;
+  top: -64px;
+  margin-left: 14rem;
+  width: 300px;
+ 
 `
 const ContentContainer = styled.div`
 width: 100%;
@@ -56,7 +56,7 @@ const ImageContainer = styled.div`
   top: -3rem;
   display: flex;
   margin-top: 10rem;
-  margin-left: 13rem;
+  margin-left: 15rem;
   margin-right: 13rem;
   margin-bottom: 4rem;
 

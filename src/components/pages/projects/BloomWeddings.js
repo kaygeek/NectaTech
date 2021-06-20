@@ -49,7 +49,7 @@ const Logo = styled.img`
 position: relative;
 top: -60px;
 margin-left: 14rem;
-width: 417.92px;
+width: 400px;
 padding-bottom: 0px;
 
 `
@@ -106,7 +106,7 @@ function BloomWeddings() {
   return (
 
 
-<Frame>
+    <Frame>
       <Projects />
       <TopVector>
         <img src={Group73} alt="vector" />

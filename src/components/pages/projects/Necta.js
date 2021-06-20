@@ -45,9 +45,8 @@ p{
 const Logo = styled.img`
 position: relative;
 top: -30px;
-margin-left: 7rem;
-width: 380px;
-height: 80px;
+margin-left: 14rem;
+width: 300px;
 padding-bottom: 2rem;
 
 `

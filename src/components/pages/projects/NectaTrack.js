@@ -46,9 +46,8 @@ p{
 const Logo = styled.img`
 position: relative;
 top: -40px;
-margin-left: 11rem;
-width: 350px;
-height: 80px;
+margin-left: 14rem;
+width: 300px;
 padding-bottom: 2rem;
 
 `
@@ -59,7 +58,7 @@ const ImageContainer = styled.div`
   top: -3rem;
   display: flex;
   margin-top: 10rem;
-  margin-left: 13rem;
+  margin-left: 14rem;
   margin-right: 13rem;
   margin-bottom: 4rem;
 

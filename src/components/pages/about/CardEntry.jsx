@@ -24,13 +24,15 @@ const CardFrame = styled(Card)`
 
 `
 const CardImage = styled.img`
+ position: relative;
+ margin-top: 3rem;
  width: 200px;
  height: 200px;
 
 `
 const CardContent = styled.div`
  position: relative;
- top: -18rem;
+ top: -20rem;
  margin-left: 11rem;
  margin-right: 2rem;
  margin-top: 2rem;

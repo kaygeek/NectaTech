@@ -2,16 +2,16 @@ import React from "react";
 import Vector from "./contacts_imgs/Vector.svg";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Button, Select } from 'antd';
 import { Row, Col } from "antd";
 import 'antd/dist/antd.css';
 
 
-const Body = styled.div`
+const Frame = styled.div`
  position:relative;
  background-color: #E5E5E5;
  width: 100%;
- height:auto;
+ height:1020px;
 `
 
 
@@ -22,7 +22,7 @@ const VectorDiv = styled.div`
 
 const FormBody = styled.div`
  position:relative;
- top: -14rem;
+ top: -27rem;
  width: 50%;
  padding: 4rem;
  margin-top: 4rem;
@@ -46,7 +46,7 @@ const PrivacyLink = styled(Link)`
 
 const Content = styled.div`
  position: relative;
- top: 19rem;
+ top: 5rem;
  margin-left: 6rem;
  list-style: none;
 
@@ -83,17 +83,21 @@ const validateMessages = {
   types: {
     email: '${label} is not a valid email!',
     number: '${label} is not a valid number!',
+    country: '${label} Please select country!'
   }
 };
 
+const { Option } = Select;
+
+
 
 const MyButton = styled(Button)`
-position:relative;
-width: 30%;
-border-radius: 2px;
-margin-top: 1rem;
-background: #333333;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ position:relative;
+ width: 30%;
+ border-radius: 2px;
+ margin-top: 1rem;
+ background: #333333;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 `
 
@@ -109,9 +113,9 @@ const Contact = () => {
   };
 
   return (
-    <Body className="contacts-body">
+    <Frame className="contacts-body">
       <VectorDiv>
-      <img src={Vector} alt="vector" style={{position:"reletive", width:"200%",}} /> 
+      <img src={Vector} alt="vector" style={{position:"reletive", width:"300%",}} /> 
       </VectorDiv>
        
 
@@ -201,18 +205,19 @@ const Contact = () => {
         </Row>
 
         <Col>
-        <Form.Item
-            name={['user', 'country']}
-            label="Country"
-            rules={[
-              {
-                required: true,
-                type: 'email',
-              },
-            ]}
-            style={{width:"1160px" ,marginRight:"1rem",}}
-          >
-             <Input placeholder=" Select Country" />
+
+
+        
+        {/* /////////////////////// */}
+          <Form.Item
+            name={["user","coutry"]}
+            label="Coutry"
+            rules={[{ required: true, message: 'Please select country!' }]} >
+              <Select placeholder="Please select country!">
+                <Option value="male">Male</Option>
+                  <Option value="female">Female</Option>
+                <Option value="other">Other</Option>
+              </Select>
           </Form.Item>
           
           <Form.Item name={['user', 'introduction']} label="Message (optional)" style={{width:"1160px" ,marginRight:"2rem",}}>
@@ -236,7 +241,7 @@ const Contact = () => {
       </FormBody>
       
 
-    </Body>
+    </Frame>
   )
 }
 
