@@ -14,6 +14,12 @@ const Body = styled.div`
  height:auto;
 `
 
+
+const VectorDiv = styled.div`
+ width: 100%;
+ overflow: hidden;
+`
+
 const FormBody = styled.div`
  position:relative;
  top: -14rem;
@@ -104,7 +110,10 @@ const Contact = () => {
 
   return (
     <Body className="contacts-body">
-       <img src={Vector} alt="vector" style={{position:"absolute", width:"200%",}} /> 
+      <VectorDiv>
+      <img src={Vector} alt="vector" style={{position:"reletive", width:"200%",}} /> 
+      </VectorDiv>
+       
 
        <Content>
          <h2>Contact Us</h2>

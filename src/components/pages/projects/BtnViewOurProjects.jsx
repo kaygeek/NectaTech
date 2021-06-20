@@ -12,7 +12,7 @@ function BtnViewOurProjects(){
                   style={{
                     position: "relative",
                     top: "300px",
-                    left: "220px",
+                    marginLeft: "-8rem",
                     width: "250px",
                     background: "#FFFFFF",
                     border: "1px solid #333333",

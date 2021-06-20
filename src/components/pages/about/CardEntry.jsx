@@ -1,35 +1,109 @@
 import React from "react";
 import "./HexagonGallery.css";
+import styled from "styled-components";
 import { Card } from 'antd';
 import BtnContactAbout from "./BtnContactAbout.jsx";
 import BtnViewOurProjectsAbout from "./ViewOurProjectsAbout.jsx";
-import img_1 from "./about_images/img_1.svg"
 
 
+
+
+const CardFrame = styled(Card)`
+ margin-left: 13rem;
+ margin-right: 15rem;
+ width: 100%;
+ height: 400px;
+ /* padding-bottom: 2rem; */
+ margin-bottom:10rem;
+ display: flex !important;
+ padding: 2rem;
+
+ @media screen and (max-width:1209px){
+  height: 500px;
+ }
+
+`
+const CardImage = styled.img`
+ width: 200px;
+ height: 200px;
+
+`
+const CardContent = styled.div`
+ position: relative;
+ top: -18rem;
+ margin-left: 11rem;
+ margin-right: 2rem;
+ margin-top: 2rem;
+ padding: 3.5rem;
+ width: 84%;
+
+`
+
+const Title = styled.div`
+ display: flex;
+ line-height: auto;
+` 
+
+const Name = styled.div`
+  color: #000;
+  font-size: 3ch;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+  margin-right: 1rem;
+`
+
+const JobTitle = styled.div`
+  position: relative;
+  /* left: -3rem; */
+  margin-left: -1rem;
+  color: #faed5b;
+  font-size: 3ch;
+  /* padding-left: 1rem; */
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+
+`
+
+const CardDescription = styled.div`
+ text-align: left;
+ font-style: normal;
+ font-weight: normal;
+ font-size: 18px;
+ display: flex;
+ align-items: center;
+ 
+ `
+
+const CardBtns = styled.div`
+margin-left: 9rem;
+position: relative;
+top: -5rem;
+padding: 0px 35%;
+display: inline-flex;
+flex-direction: row;
+`
 
 
 function CardEntry(props){
-    return (
-        <div>
-        <Card style={{marginBottom:"10rem"}} className="card">
-          <div className="card-container">
-            <img src={img_1}></img>
-            <div className="card-content">
-
-              <div className="title">
-                <h3 className="name">{props.name}</h3>
-                <p className="job-title">{ props.jobTitle}</p>
-              </div>
-              <p className="card-description">{props.description}</p>
-                
-            </div>
-          </div>
-        </Card>
-        
-        <div className="BtnAbout-container">
+  return (
+    <div>
+      <CardFrame > 
+        <CardImage src={props.src}></CardImage>
+            {/* <img src={prop.src} ></img> */}
+            <CardContent>
+              <Title>
+                <Name>{props.name} {}</Name>
+                <JobTitle>{ props.jobTitle}</JobTitle>
+              </Title>
+              <CardDescription>{props.description}</CardDescription>        
+            </CardContent>
+        </CardFrame>
+        <CardBtns>
         <BtnContactAbout />
         <BtnViewOurProjectsAbout />
-        </div>
+        </CardBtns>
       </div>
     );
 }

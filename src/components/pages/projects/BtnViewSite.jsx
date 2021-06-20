@@ -10,7 +10,6 @@ function BtnViewSite(){
           size="large"
           style={{
             position: "relative",
-            // top:"-10rem",
             left:"550px",
             width: "350px",
             display: "flex",

@@ -1,26 +1,48 @@
 import React from "react";
-import ReactDom from 'react-dom';
 import "./Projects.css";
 import Group73 from "./projects_images/scrumpro_img/Group73.svg";
+import BtnDiscussYourProjectWithUs from "./BtnDiscussYourProjectWithUs.jsx";
+import BtnViewOurProjects from "./BtnViewOurProjects";
+import styled from "styled-components";
 
+
+const Fram = styled.div`
+position: relative;
+z-index: -2;
+background: #E5E5E5;
+height: 320px;
+width: 100%;
+margin-top: 8rem;
+padding-top:4rem;
+
+`
+
+ const BtnContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  top: -33rem;
+  opacity: 10;
+ `
+
+ const BottomVector = styled.img`
+  position: relative;
+  top: -106px;
+ `
 
 function ProjectsBottomContent() {
   return (
-    <div className="section-3"
-      style={{
-        position: "relative",
-        zIndex: "-2",
-        background: "#E5E5E5",
-        height: "320px"
-      }}>
+    <Fram>
       <div className="vector-structure">
-        <img
-          className="bottom-vector"
-          src={Group73}
-          alt="vector"
-        />
+        <BottomVector src={Group73}  alt="vector" />
       </div>
-    </div>
+
+
+
+      <BtnContainer className="flex-container">
+        <BtnDiscussYourProjectWithUs />
+        <BtnViewOurProjects />
+      </BtnContainer>
+    </Fram>
   );
 
 }

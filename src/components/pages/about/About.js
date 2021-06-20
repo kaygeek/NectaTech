@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import 'antd/dist/antd.css';
-import "./About.css";
 import HexagonGallery from "./HexagonGallery.jsx";
 
 

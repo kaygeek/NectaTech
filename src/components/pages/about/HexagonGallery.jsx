@@ -96,94 +96,48 @@ function HexagonGallery() {
 const [card, setcard] = useState("")
 
 
-function HandleClicks(){
-if (team[0].id === 0){
-  setcard(
-   <CardEntry
-    id = {team[0].id}
-    name = {team [0].name}
-    jobTitle = {team[0].jobTitle}
-    description = {team [0].description}
-  />
-  )
-} else if (team[1].id === 1){
-    setcard(
-      <CardEntry
-       id = {team[1].id}
-       name = {team [1].name}
-       jobTitle = {team[1].jobTitle}
-       description = {team [1].description}
-     />
-     )
+function HandleClicks(id){
 
-} else if (team[2].id=== 2){
-  setcard(
-    <CardEntry
-     id = {team[2].id}
-     name = {team [2].name}
-     jobTitle = {team[2].jobTitle}
-     description = {team [2].description}
-   />
-   )
-} else if (team[3].id){
-  setcard(
-    <CardEntry
-     id = {team[3].id}
-     name = {team [3].name}
-     jobTitle = {team[3].jobTitle}
-     description = {team [3].description}
-   />
-   )
-} else if (team[4].id === 4){
-  setcard(
-    <CardEntry
-     id = {team[4].id}
-     name = {team [4].name}
-     jobTitle = {team[4].jobTitle}
-     description = {team [4].description}
-   />
-   )
-} else {
-  setcard(
-    <CardEntry
-     id = {team[5].id}
-     name = {team [5].name}
-     jobTitle = {team[5].jobTitle}
-     description = {team [5].description}
-   />
-   )
-}
+  const member = team[id];
 
+ setcard( 
+ <CardEntry
+  id = {member.id}
+  name = {member.name}
+  jobTitle = {member.jobTitle}
+  description = {member.description}
+  src = {member.src}
+/>)
 }
 
   return (
     <div>
 
       <HexagonContainer className="hexagon-gallery">
-        <Hex onClick={HandleClicks} className="hex">
+        <Hex onClick={(e)=>HandleClicks(0)} key={0} className="hex">
           <img  src={img_1} alt="Bruce" />
             <h2>Bruce Kay</h2>
         </Hex>
         <Hex className="hex">
           <img src={img_2} alt="NectaBee" />
         </Hex>
-        <Hex onClick={HandleClicks} className="hex">
+        <Hex onClick={(e)=>HandleClicks(1)} key={1}  className="hex">
           <img src={img_3} alt="Courtney" />
           <h2>Courtney Joote</h2>
         </Hex>
-        <Hex onClick={HandleClicks} className="hex">
+        <Hex onClick={(e)=>HandleClicks(2)} key={2}  className="hex">
           <img src={img_4} alt="Kgaugelo" />
           <h2>Kgaugelo Marakalla</h2>
         </Hex>
-        <Hex onClick={HandleClicks} className="hex">
+        <Hex onClick={(e)=>HandleClicks(3)} key={3}  className="hex">
           <img src={img_5} alt="Merveille" />
           <h2>Merveille Van Eck Kay</h2>
         </Hex>
-        <Hex onClick={HandleClicks} className="hex">
+        <Hex onClick={(e)=>HandleClicks(4)} key={4}  className="hex">
           <img src={img_6} alt="Megan" />
           <h2>Megan Serfontein</h2>
         </Hex>
-        <Hex onClick={HandleClicks} className="hex">
+        <Hex onClick={(e)=>HandleClicks(5)} key={5}  className="hex">
           <img src={img_7} alt="Carmyn" />
           <h2>Carmyn vM</h2>
         </Hex>

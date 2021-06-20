@@ -95,10 +95,44 @@
   grid-column: 9 / span 2;
 }
 
-/*     ScrumPro Section   */
-.scrumpro-body{
-  width: 100%;
+
+
+
+.flex-container .img1 {
+  position: relative;
+  width: 27%;
+  height: 30%;
 }
+
+.flex-container .img2 {
+  position: relative;
+  width: 48%;
+  height: 48%;
+}
+.flex-container .img3 {
+  position: relative;
+  width: 27%;
+  height: 38%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*     ScrumPro Section   */
+/* .scrumpro-body{
+  width: 100%;
+} */
 
 .vector-structure .top-vector {
   position: relative;
@@ -106,10 +140,10 @@
   transform: rotate(180deg);
 }
 
-.vector-structure .bottom-vector {
+/* .vector-structure .bottom-vector {
   position: relative;
   top: -50px;
-}
+} */
 
 .scrumpro-description {
   position: relative;
@@ -137,22 +171,28 @@
   margin-bottom: 2rem;
   /* padding-bottom: -5rem; */
 }
-.flex-container .img1 {
-  position: relative;
-  width: 27%;
-  height: 30%;
-}
 
-.flex-container .img2 {
-  position: relative;
-  width: 48%;
-  height: 48%;
-}
-.flex-container .img3 {
-  position: relative;
-  width: 27%;
-  height: 38%;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*    PlayPro     */
 .flex-container .playpro-img1 {
