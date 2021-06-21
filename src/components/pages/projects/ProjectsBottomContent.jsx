@@ -8,26 +8,21 @@ import styled from "styled-components";
 
 
 const Fram = styled.div`
-position: relative;
-z-index: -2;
-background: #E5E5E5;
-height: 320px;
-width: 100%;
-margin-top: 8rem;
-padding-top:4rem;
-
+  background: #E5E5E5;
+  height: 320px;
+  width: 100%;
+  margin-top: 100px;
 `
 
  const BtnContainer = styled.div`
   display: flex;
   flex-direction: row;
-  top: -33rem;
-  opacity: 10;
+  justify-content: center;
+  align-items: center;
  `
 
  const BottomVector = styled.img`
-  position: relative;
-  top: -106px;
+  transform: translateY(-30%);
  `
 
 function ProjectsBottomContent() {
@@ -36,10 +31,10 @@ function ProjectsBottomContent() {
       <div className="vector-structure">
         <BottomVector src={Group73}  alt="vector" />
       </div>
-        <BtnContainer className="flex-container">
+      <BtnContainer>
         <BtnDiscussYourProjectWithUs />
         <BtnViewOurProjects />
-        </BtnContainer>
+      </BtnContainer>
     </Fram>
   );
 
