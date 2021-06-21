@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-// import {FaTimes} from "react-icons/fa";
-// import {FaBars} from "react-icons/fa";
+import { MenuOutlined } from '@ant-design/icons';
+import { CloseOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
 import logo from "./logo.svg";
+import "./Navbar.css";
 
 
 const Nav = styled.nav`
@@ -73,20 +74,21 @@ const  NavbarLink = styled(Link)`
   color: #faed5b;
 }
 `
-
+const HamburgerMenu = styled.div`
+color: black;
+`
 
 
 const Navbar = () => {
   
   const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+  const HandleHamburgerMenu = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
-  function handleClick() {
-    setClick(!click);
-  }
-  function closeMobileMenu() {
-    setClick(false);
-  }
+
+  // function closeMobileMenu() {
+  //   setClick(false);
+  // }
 
   return (
     <Nav>
@@ -94,11 +96,15 @@ const Navbar = () => {
         <img src={logo} className="App-logo" alt="logo" />
       </NavbarLogo>
 
-       <NavItems>
-        <NavbarLink to="/"> Home </NavbarLink>       
-        <NavbarLink to="about"> About </NavbarLink>      
-        <NavbarLink to="projects"> Projects </NavbarLink>               
-        <NavbarLink to="contact"> Contact </NavbarLink>
+      <HamburgerMenu className="menu-icon "onClick={HandleHamburgerMenu}>
+        {click ? <CloseOutlined /> : <MenuOutlined />}
+      </HamburgerMenu>
+
+       <NavItems className={click ? "nav-menu active" :"nav-menu"}>
+        <NavbarLink to="/" onClick={closeMobileMenu}> Home </NavbarLink>       
+        <NavbarLink to="about" onClick={closeMobileMenu}> About </NavbarLink>      
+        <NavbarLink to="projects"onClick={closeMobileMenu}> Projects </NavbarLink>               
+        <NavbarLink to="contact"onClick={closeMobileMenu}> Contact </NavbarLink>
       </NavItems>
     </Nav>
 
