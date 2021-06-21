@@ -9,16 +9,11 @@ import BtnViewOurProjectsAbout from "./ViewOurProjectsAbout.jsx";
 
 
 const CardFrame = styled(Card)`
- margin-left: 13rem;
- margin-right: 15rem;
  width: 100%;
  height: 400px;
- /* padding-bottom: 2rem; */
- margin-bottom:10rem;
  display: flex !important;
- padding: 2rem;
 
- @media screen and (max-width:1209px){
+ @media screen and (max-width:1209px) {
   height: 500px;
  }
 
@@ -28,7 +23,6 @@ const CardImage = styled.img`
  margin-top: 3rem;
  width: 200px;
  height: 200px;
-
 `
 const CardContent = styled.div`
  position: relative;
@@ -38,7 +32,6 @@ const CardContent = styled.div`
  margin-top: 2rem;
  padding: 3.5rem;
  width: 84%;
-
 `
 
 const Title = styled.div`
@@ -65,26 +58,24 @@ const JobTitle = styled.div`
   display: flex;
   align-items: center;
   padding-bottom: 2rem;
-
 `
 
 const CardDescription = styled.div`
- text-align: left;
- font-style: normal;
- font-weight: normal;
- font-size: 18px;
- display: flex;
- align-items: center;
- 
- `
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+`
 
 const CardBtns = styled.div`
-margin-left: 9rem;
-position: relative;
-top: -5rem;
-padding: 0px 35%;
-display: inline-flex;
-flex-direction: row;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
 `
 
 
@@ -103,8 +94,8 @@ function CardEntry(props){
             </CardContent>
         </CardFrame>
         <CardBtns>
-        <BtnContactAbout />
-        <BtnViewOurProjectsAbout />
+          <BtnContactAbout />
+          <BtnViewOurProjectsAbout />
         </CardBtns>
       </div>
     );

@@ -4,14 +4,14 @@ import { Button } from 'antd';
 import styled from "styled-components";
 
 const MyButton = styled(Button)`
- position: relative;
  width: 300px;
  background: #FFFFFF;
  border: 1px solid #333333;
  box-sizing: border-box;
  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
  border-radius: 2px;
- z-index:"1"
+ z-index: 1;
+ margin-left: 15px;
 `
 
 function BtnViewOurProjectsAbout(){

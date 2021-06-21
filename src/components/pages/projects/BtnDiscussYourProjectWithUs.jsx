@@ -1,45 +1,40 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import styled from 'styled-components';
 import { Button } from 'antd';
 
 const BtnDiscussProjectWithUs = styled(Button)`
- position: relative;
- top: 300px;
- margin-left: 10rem;
  width: 320px;
  box-sizing: border-box;
  border-radius: 2px;
- z-index: 1;
+ z-index: 10;
  background: #333333;
  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ margin-right: 15px;
  
 `
 
 function BtnDiscussYourProjectWithUs(){
 
-  // const history = useHistory();
+  const history = useHistory()
 
-  // const routeChange = (e) =>{ 
-  //   let path = `/contact`; 
-  //   history.push(path);
-  // }
-
-
-  // onClick={(e)=>this.routeChange}
+  const onClick = useCallback(
+    () => {
+      history.push('/contact')
+    },
+    [history],
+  )
 
   return(
-    <Link to="/contact">
     <BtnDiscussProjectWithUs
-    type="primary"
-    size="large"
-    block>
-      
-    Discuss your project with us
-  </BtnDiscussProjectWithUs>
-
-</Link>   
+      onClick={onClick}
+      type="primary"
+      size="large"
+      block
+    >
+      Discuss your project with us
+    </BtnDiscussProjectWithUs>
  );
 }
 

@@ -8,40 +8,6 @@ import img_5 from "./projects_images/img_5.svg";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-// const ContentBody = styled.div`
-//  flex-direction: column;
-//  background: #e5e5e5;
-//  width: 100%;
-
-// `
-// const ProjectsContainer = styled.div`
-// h1{
-//   position: relative;
-//   margin-left: -4rem;
-// }
-
-`
-// const ProjectsGallery = styled.div`
-//   margin: auto;
-//   margin-top: 50px;
-//   max-width: 1010px;
-//   display: grid;
-//   grid-template-columns: repeat(10, 1fr);
-//   grid-auto-rows: 200px;
-//   grid-gap: 12px;
-//   padding-bottom: 165px;
-//   padding-top: 5rem;
-
-//  .hex{
-//   display: flex;
-//   position: relative;
-//   width: 156.55px;
-//   height: 180.71px;
-//   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%,   0% 75%,  0% 25%);
-//   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-//   }
-// `
-
 function Projects() {
   return (
     <div className="content-body">

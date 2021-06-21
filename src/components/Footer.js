@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import Logo from "./logo.svg";
 import styled from "styled-components";
 
-
-
 const footer = styled.footer`
  width: 100%;
 
@@ -16,64 +14,41 @@ const MainFooter = styled.footer`
   flex-direction: row;
   width: 100%;
   height: 150px;
-  justify-content:inline;
+  justify-content: space-between;
   align-items: center;
-  padding-bottom: 30px;
+  padding-bottom: 20px 20px 30px 10px;
   font-size: 1.2vw;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 
 `
 const FooterLogo = styled(Link)`
-  position: relative;
-  left:-1.9rem;
   padding: 4px 20px;
-  margin-left: 100px;
+  margin-top: 20px;
   width: 455px;
-
-
-  @media screen and (max-width: 992px){
-   position: relative;
-   width: 700px;
-   padding-right: 25px;
-  }
 `
 
 const MainFooterItems = styled.div`
- position: relative;
- justify-content:inline;
- align-items: center;
- justify-content:center;
  display: flex;
- margin-left: 50%;
+ align-items: center;
+ justify-content: flex-end;
+ display: flex;
  flex-direction: row;
- width: 60%;
+ width: auto;
  height: 60px;
 
-
- @media screen and (max-width:984px){
-  width: 90%;
-  margin-left:40%
-  }
+ margin-right: 20px;
 
 `
 
 const MainFooterLink = styled(Link)`
  color: #000000;
  text-decoration: none;
- padding: 0.5rem -2rem;
- display: inline-block;
- margin-left: -6rem;
 
  &:hover {
   color: #faed5b;
-}
- @media screen and (max-width:984px){
-   position: relative;
-   left: -12rem;
-   padding: 0.5rem -1rem;
-   margin-left: 0px;
+ }
 
-  }
+ margin: 0 10px;
 
 `
 
@@ -81,97 +56,46 @@ const MainFooterLink = styled(Link)`
 const ChildFooter = styled.footer`
  display: flex;
  flex-direction: row;
- justify-content:flex-start; 
+ justify-content: space-between; 
  width:100%;
 
-
- @media screen and (max-width:677px){
-  position: relative;
-  display: inline;
- }
-
- 
- @media screen and (max-width:939px){
-  position: relative;
-  display: inline;
- }
+ padding: 10px;
 
 `
 
 const FooterDate = styled.div`
  position: relative;
- left: -2rem;
- padding-left: 2rem; 
- justify-content:inline; 
  align-items: center; 
  justify-content: left; 
  display: flex;
- margin-left: 7%;
+ margin-left: 20px;
  flex-direction: row;
  padding-right: 2rem;
- 
 
- @media screen and (max-width:1010px){
-  left: 0px;
- }
-
- @media screen and (max-width:677px){
-  justify-content: center;
-  padding-top:1rem;
-}
-
-@media screen and (max-width:939px){
-  justify-content: center;
-  padding-top:1rem;
-}
-
- `
+`
 
 const ChildFooterItems = styled.div`
- position: relative;
- left: -9rem;
- justify-content: space-evenly;
- align-items: center;
- justify-content: center;
  display: flex;
- margin-left: 20%;
+ justify-content: flex-end;
+ align-items: center;
  padding-top: 5px;
  flex-direction: row;
  width: 96%;
  height: 40px;
  font-size: 1.2vw;
-
-
- @media screen and (max-width:738px){
-  left: 0px;
-  width: 77%;
-  margin-left: 5%;
- }
-
-
 `
+
 const ChildFooterLink = styled(Link)`
  color: #000000;
  text-decoration: none;
- padding: 0.5rem -2rem;
- display: inline-block;
- margin-left: -15rem;
+
+ margin: 0 10px;
 
  &:hover {
   color: #faed5b;
-}
-
-@media screen and (max-width:677px){
- margin-left:6rem;
-}
-
-@media screen and (max-width:939px){
- margin-left:6rem; 
-}
+ }
 
 `
-
-
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -179,30 +103,28 @@ function Footer() {
   return (
     <footer >
       <MainFooter>
-       <FooterLogo to="/">
-       <img src={Logo} className="footer-logo" alt="logo" />
-      </FooterLogo>
+        <FooterLogo to="/">
+          <img src={Logo} className="footer-logo" alt="logo" />
+        </FooterLogo>
 
-       <MainFooterItems>
-        <MainFooterLink to="/"> Home </MainFooterLink>       
-        <MainFooterLink to="about"> About </MainFooterLink>      
-        <MainFooterLink to="projects"> Projects </MainFooterLink>               
-        <MainFooterLink to="contact"> Contact </MainFooterLink>
-      </MainFooterItems>
-    </MainFooter>
+        <MainFooterItems>
+          <MainFooterLink to="/"> Home </MainFooterLink>       
+          <MainFooterLink to="about"> About </MainFooterLink>      
+          <MainFooterLink to="projects"> Projects </MainFooterLink>               
+          <MainFooterLink to="contact"> Contact </MainFooterLink>
+        </MainFooterItems>
+      </MainFooter>
 
-     <ChildFooter>
+      <ChildFooter>
      
-     <FooterDate>© Copyright {year} NectaTech</FooterDate>
-        
-       <ChildFooterItems>
-        <ChildFooterLink to="/"> Site Map </ChildFooterLink>       
-        <ChildFooterLink to="about"> Privacy Policy </ChildFooterLink>                   
-        <ChildFooterLink to="contact"> Terms of Use </ChildFooterLink>
-      </ChildFooterItems>
-    </ChildFooter>
+        <FooterDate>© Copyright {year} NectaTech</FooterDate>
 
-
+        <ChildFooterItems>
+          <ChildFooterLink to="/"> Site Map </ChildFooterLink>       
+          <ChildFooterLink to="about"> Privacy Policy </ChildFooterLink>                   
+          <ChildFooterLink to="contact"> Terms of Use </ChildFooterLink>
+        </ChildFooterItems>
+      </ChildFooter>
     </footer>
     
   );

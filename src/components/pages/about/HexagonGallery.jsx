@@ -14,9 +14,6 @@ import img_7 from "./about_images/img_7.svg";
 
 
 const HexagonContainer = styled.div`
-  margin-top: 50px;
-  margin-left: 13rem;
-  margin-right: 9rem;
   max-width: 95%;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -26,37 +23,6 @@ const HexagonContainer = styled.div`
   padding-top: 100px;
   padding-bottom: 200px;
 
-  @media screen and (max-width:1159px){
-    margin-left: 10rem;
-    margin-top: 20px;
-
-  }
-
-
-  @media screen and (max-width:1024px){
-    margin-left: 8rem;
-    grid-gap: 79px;
-    grid-auto-rows: 110px; 
-  }
-  
-  
-  @media screen and (max-width:768px){
-    position: relative;
-    top:-6rem;
-    margin-left: 5rem;
-    grid-gap: 73px;
-    grid-auto-rows: 60px;
-    padding-bottom: 80px;
-  }
-
-  @media screen and (max-width:375px){
-    position: relative;
-    top:-7rem;
-    margin-left: 1.8rem;
-    grid-gap: 40px;
-    grid-auto-rows: 37px;
-    padding-bottom: 80px;
- }
 `
 
 const Hex = styled.div`
