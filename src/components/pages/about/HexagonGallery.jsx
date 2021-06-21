@@ -39,7 +39,7 @@ const HexagonContainer = styled.div`
     grid-auto-rows: 110px; 
   }
   
-
+  
   @media screen and (max-width:768px){
     position: relative;
     top:-6rem;
@@ -66,10 +66,7 @@ const Hex = styled.div`
   height: 265px;
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
- 
-  &:hover {
-    background: linear-gradient(0deg, rgba(250, 237, 91, 0.5), rgba(250, 237, 91, 0.5)),
-  }
+
   
 
  
@@ -126,12 +123,12 @@ const NameContainer = styled.div`
  &:hover {
   opacity: 1;
 
- h3{
+  h2{
     color: #000000;
     font-style: normal;
     font-weight: bold;
     font-size: 23px;
-    line-height: 24px;
+    line-height: 22px;
     padding: 16px 32px;
     text-align: center;
     position: relative;
@@ -177,7 +174,7 @@ function HandleClicks(id){
         <Hex onClick={(e)=>HandleClicks(0)} key={0} className="hex">
           <HexImage  src={img_1} alt="Bruce" />
           <NameContainer>
-          <h3>Bruce Kay</h3>
+          <h2>Bruce Kay</h2>
           </NameContainer>
           
             
@@ -188,35 +185,35 @@ function HandleClicks(id){
         <Hex onClick={(e)=>HandleClicks(1)} key={1}  className="hex">
           <HexImage src={img_3} alt="Courtney" />
           <NameContainer>
-          <h3>Courtney Joote</h3>
+          <h2>Courtney Joote</h2>
           </NameContainer>
           
         </Hex>
         <Hex onClick={(e)=>HandleClicks(2)} key={2}  className="hex">
           <HexImage src={img_4} alt="Kgaugelo" />
           <NameContainer>
-          <h3>Kgaugelo Marakalla</h3>
+          <h2>Kgaugelo Marakalla</h2>
           </NameContainer>
           
         </Hex>
         <Hex onClick={(e)=>HandleClicks(3)} key={3}  className="hex">
           <HexImage src={img_5} alt="Merveille" />
           <NameContainer>
-          <h3>Merveille Van Eck Kay</h3>
+          <h2>Merveille Van Eck Kay</h2>
           </NameContainer>
           
         </Hex>
         <Hex onClick={(e)=>HandleClicks(4)} key={4}  className="hex">
           <HexImage src={img_6} alt="Megan" />
           <NameContainer>
-          <h3>Megan Serfontein</h3>
+          <h2>Megan Serfontein</h2>
           </NameContainer>
         
         </Hex>
         <Hex onClick={(e)=>HandleClicks(5)} key={5}  className="hex">
           <HexImage src={img_7} alt="Carmyn" />
           <NameContainer>
-          <h3>Carmyn vM</h3>
+          <h2>Carmyn vM</h2>
           </NameContainer>
          
         </Hex>
