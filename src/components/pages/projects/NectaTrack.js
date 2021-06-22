@@ -57,6 +57,12 @@ const ImageContainer = styled.div`
   margin-left: 13rem;
   margin-right: 13rem;
   margin-bottom: 4rem;
+ 
+img{
+  width: 50%;
+}
+ 
+
 
 `
 const BtnViewSite = styled(Button)`
@@ -71,18 +77,7 @@ const BtnViewSite = styled(Button)`
 `
 
 
-const Image1 = styled.img`
-  position: relative;
-  width:50%;
-  /* height: 30%; */
 
-`
-const Image2 = styled.img`
-  position: relative;
-  width: 50%;
-  /* height: 48%; */
-
-`
 
 function NectaTrack() {
   return (
@@ -102,8 +97,8 @@ function NectaTrack() {
           nisi congue orci purus facilisis porttitor.
         </p>  
         <ImageContainer>
-        <Image1 src={image14} alt="Vector 16 " />
-        <Image2 src={smartmockups_kaqomkl8} alt="image 16 " />
+        <img src={image14} alt="Vector 16 " />
+        <img src={smartmockups_kaqomkl8} alt="image 16 " />
         </ImageContainer>
         <BtnViewSite  href="https://www.necta.tech/NectaTrack" className="scrumpro-btnViewSite" type="primary" size="large" block >
           View Site

@@ -19,7 +19,6 @@ const CardFrame = styled(Card)`
 
 `
 const CardImage = styled.img`
- position: relative;
  margin-top: 3rem;
  width: 200px;
  height: 200px;
@@ -84,7 +83,6 @@ function CardEntry(props){
     <div>
       <CardFrame > 
         <CardImage src={props.src}></CardImage>
-            {/* <img src={prop.src} ></img> */}
             <CardContent>
               <Title>
                 <Name>{props.name} {}</Name>

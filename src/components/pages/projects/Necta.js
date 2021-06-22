@@ -30,12 +30,6 @@ const ContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   p {
-    /* width: 70%;
-    height: 116px;
-    font-weight: normal;
-    font-size: 19px;
-    line-height: 158%;
-    padding-bottom: 5px; */
     width: 70%;
     height: 116px;
     font-weight: normal;
@@ -81,17 +75,13 @@ const BtnViewSite = styled(Button)`
 
 
 const Image1 = styled.img`
-  position: relative;
   width: 27%;
   height: 320px;
   
 
 `
 const Image2 = styled.img`
-  position: relative;
   width: 55%;
-  
-
 `
 
 

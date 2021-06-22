@@ -53,11 +53,25 @@ const ImageContainer = styled.div`
   width: 70%;
   display: flex;
   margin-top: 10rem;
-  margin-left: 28rem;
+  margin-left: 30rem;
   margin-right: 13rem;
   margin-bottom: 4rem;
 
 `
+
+
+const Image1 = styled.img`
+  width: 27%;
+  height: 30%;
+
+`
+const Image2 = styled.img`
+  width: 48%;
+  height: 48%;
+
+`
+
+
 const BtnViewSite = styled(Button)`
   width: 300px;
   margin-bottom: 2rem;
@@ -68,22 +82,6 @@ const BtnViewSite = styled(Button)`
   border: none;
   z-index: 10;
 `
-
-const Image1 = styled.img`
-  position: relative;
-  width: 27%;
-  height: 30%;
-
-`
-const Image2 = styled.img`
-  position: relative;
-  width: 48%;
-  height: 48%;
-
-`
-
-
-
 
 function PlayPro() {
   return (

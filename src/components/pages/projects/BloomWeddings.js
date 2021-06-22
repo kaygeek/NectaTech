@@ -66,13 +66,11 @@ const ImageContainer = styled.div`
 `
 
 const Image1 = styled.img`
-  position: relative;
   width: 58%;
   height: 30%;
 
 `
 const Image2 = styled.img`
-  position: relative;
   width: 48%;
   height: 48%;
 
