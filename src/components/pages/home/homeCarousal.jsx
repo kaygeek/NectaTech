@@ -34,6 +34,9 @@ const Frame = styled.div`
     font-size: 25px;
     margin: 0;
   }
+ @media (min-width:791px){
+
+  }
 `
 
 function HomeCarousel() {
@@ -51,7 +54,7 @@ function HomeCarousel() {
 
     <Frame>
 
-      <img src={second_slide} style={{maxWidth: '300px'}} alt="laptop" />
+      <img src={second_slide} style={{maxWidth: '250px'}} alt="laptop" />
       <p style={{marginLeft: '15px'}}>
        We have you covered, from <b>Design</b> through <b>Development</b> and <b>beyond</b>!
       </p>

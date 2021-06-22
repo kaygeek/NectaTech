@@ -11,73 +11,65 @@ import ProjectsBottomContent from "./ProjectsBottomContent";
 import styled from "styled-components";
 
 
-
 const Frame = styled.div`
- width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 `
 
-const TopVector = styled.div`
- position: relative;
- top: -120px; 
- transform: rotate(180deg);
-
+const TopVector = styled.img`
+  transform: translateY(-66%) rotate(180deg);
+  z-index: 10;
 `
 const ContentContainer = styled.div`
-width: 100%;
-
-p{
-  position: relative;
-  margin-top: -1rem;
-  margin-left: 14rem;
-  margin-right: 5rem;
-  width: 70%;
-  height: 116px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 19px;
-  line-height: 158%;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding-bottom: 5px;
-}
+  p {
+    width: 70%;
+    height: 116px;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 158%;
+    padding-bottom: 5px;
+  }
+`
+
+const LogoTitle = styled.div`
+  width: 70%;
+  display: flex;
 `
 
 const Logo = styled.img`
-position: relative;
-top: -40px;
-margin-left: 14rem;
-width: 300px;
-padding-bottom: 2rem;
+  width: 270px;
+  height: 80px;
+  padding-bottom: 2rem;
 
 `
 
 const ImageContainer = styled.div`
-  position: relative;
   width: 70%;
-  top: -3rem;
   display: flex;
   margin-top: 10rem;
-  margin-left: 14rem;
+  margin-left: 13rem;
   margin-right: 13rem;
   margin-bottom: 4rem;
 
 `
 const BtnViewSite = styled(Button)`
-  position: relative;
-  margin-left:35rem;
   width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 2rem;
   padding: 5px 16px;
   background: #0F4C81;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
   border: none;
-
+  z-index: 10;
 `
+
 
 const Image1 = styled.img`
   position: relative;
@@ -94,14 +86,13 @@ const Image2 = styled.img`
 
 function NectaTrack() {
   return (
-
     <Frame>
       <Projects />
-      <TopVector>
-        <img src={Group73} alt="vector" />
-      </TopVector>
+        <TopVector src={Group73} alt="vector" />
       <ContentContainer>
-      <Logo src={NectaTrack_Logo} alt="ScrumPro heading logo" />
+        <LogoTitle>
+          <Logo src={NectaTrack_Logo} alt="ScrumPro heading logo" />
+        </LogoTitle>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec non massa
           orci enim. Nec amet mollis eget mauris praesent neque, augue ut.
@@ -110,17 +101,18 @@ function NectaTrack() {
           ipsum. Amet, feugiat vitae vitae at sed viverra tempus. Odio habitant
           nisi congue orci purus facilisis porttitor.
         </p>  
-      <ImageContainer>
+        <ImageContainer>
         <Image1 src={image14} alt="Vector 16 " />
         <Image2 src={smartmockups_kaqomkl8} alt="image 16 " />
-      </ImageContainer>
-      <BtnViewSite  href="https://www.necta.tech/NectaTrack" className="scrumpro-btnViewSite" type="primary" size="large" block >
-        View Site
-      </BtnViewSite>
-     </ContentContainer>
+        </ImageContainer>
+        <BtnViewSite  href="https://www.necta.tech/NectaTrack" className="scrumpro-btnViewSite" type="primary" size="large" block >
+          View Site
+        </BtnViewSite>
+      </ContentContainer>
       <ProjectsBottomContent />
-    </Frame> 
+    </Frame>
   );
 }
 
 export default NectaTrack;
+
