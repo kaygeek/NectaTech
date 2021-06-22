@@ -77,13 +77,11 @@ const Image1 = styled.img`
 
 `
 const Image2 = styled.img`
-  position: relative;
   width: 48%;
   height: 48%;
 
 `
  const Image3 = styled.img`
-  position: relative;
   width: 27%;
   height: 38%;
 
@@ -121,3 +119,5 @@ function ScrumPro() {
 }
 
 export default ScrumPro;
+
+
