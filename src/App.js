@@ -12,6 +12,7 @@ import ScrumPro from "./components/pages/projects/ScrumPro";
 import NectaTrack from "./components/pages/projects/NectaTrack";
 import Necta from "./components/pages/projects/Necta";
 import BloomWeddings from "./components/pages/projects/BloomWeddings";
+import ThankYouCard from "./components/pages/concact/ThankYouCard";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/NectaTrack" component={NectaTrack} />
         <Route exact path="/Necta" component={Necta} />
         <Route exact path="/BloomWeddings" component={BloomWeddings} />
+        <Route exact path="/ThankYouCard" component={ThankYouCard} />
       </Switch>
 
       <Footer />

@@ -15,13 +15,17 @@ const AboutBody = styled.div`
 `
 
 const AboutContainer = styled.div`
-  width: 73%;
-
+  width: 70%;
+  margin-top: 3rem;
+  flex-direction: column;
+  align-items: center;
   h1 {
     margin: 30px 0;
+    font-weight: bold;
   }
 
   & p {
+    width: 100%;
     height: 116px;
     font-style: normal;
     font-weight: normal;
@@ -30,7 +34,8 @@ const AboutContainer = styled.div`
     display: flex;
     align-items: center;
     color: #333333;
-    margin: 0px;
+    margin-bottom: 2rem;
+    margin-top:2rem;
     padding-bottom: 5px;
 
   }

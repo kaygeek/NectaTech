@@ -4,33 +4,37 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Form, Input, Button, Select } from 'antd';
 import { Row, Col } from "antd";
-import 'antd/dist/antd.css';
+import { AiOutlineCheck } from "react-icons/ai";
 
 
 const Frame = styled.div`
- position:relative;
+ /* position:relative; */
  background-color: #E5E5E5;
  width: 100%;
  height:1020px;
+
 `
 
 
 const VectorDiv = styled.div`
  width: 100%;
  overflow: hidden;
+
 `
 
 const FormBody = styled.div`
- position:relative;
- top: -27rem;
- width: 50%;
+position: absolute;
+ display:flex;
+ top: 9rem;  
+ width: auto;
  padding: 4rem;
- margin-top: 4rem;
+ /* margin-top: -27rem; */
  margin-bottom: 1rem;
- margin-left:  36rem;
- margin-right: 6rem;
+ margin-left:  37rem;
+ margin-right: 12rem;
  background: #FFFFFF;
- z-index: 10px;
+ z-index: 1;
+ overflow: hidden;
 `
 
 const PrivacyTag = styled.div`
@@ -40,29 +44,31 @@ const PrivacyTag = styled.div`
 `
 
 const PrivacyLink = styled(Link)`
- position: relative;
+ position: flex;
 
 `
 
 const Content = styled.div`
- position: relative;
- top: 5rem;
+ margin-top: 3rem;
  margin-left: 6rem;
+ margin-right:40rem;
  list-style: none;
 
 ul{
- list-style: none;
- line-height: 52px;
- color: #E5E5E5;
+  margin-left:-2rem;
+  list-style: none;
+  line-height: 52px;
+  color: black;
+  list-style: none;
+  font-size: 1rem;
+  text-align: left;
 }
 
-ul li:before{
- content: "✔️"
-}
+
 
 `
 
-const ContentList = styled(Link)`
+const ContentList = styled.div`
  list-style: none;
  font-size: 1rem;
  text-align: left;
@@ -103,14 +109,22 @@ const MyButton = styled(Button)`
 
 
 
-
-
 /* eslint-enable no-template-curly-in-string */
 
 const Contact = () => {
   const onFinish = (values) => {
     console.log(values);
   };
+
+
+  // const history = useHistory()
+
+  // const onClick = useCallback(
+  //   () => {
+  //     history.push('/contact')
+  //   },
+  //   [history],
+  // )
 
   return (
     <Frame className="contacts-body">
@@ -122,9 +136,9 @@ const Contact = () => {
        <Content>
          <h2>Contact Us</h2>
          <ul>
-           <li><ContentList>Reason to contact us</ContentList></li>
-           <li><ContentList>Description of what we can do for your company</ContentList></li>
-           <li><ContentList>Reason to contact us</ContentList></li>          
+         <li><AiOutlineCheck/>Reason to contact us</li>
+         <li><AiOutlineCheck/>Description of what we can do for your company</li>
+         <li><AiOutlineCheck/>Reason to contact us</li>          
          </ul>
        </Content>
 
@@ -141,7 +155,7 @@ const Contact = () => {
                   required: true,
                 },
               ]}
-              style={{width:"570px" ,marginRight:"1rem",}}
+              style={{width:"120%" ,marginRight:"5rem",}}
              >
               <Input placeholder="Your first name" />
            </Form.Item>
@@ -158,7 +172,7 @@ const Contact = () => {
                 },
               ]}
 
-              style={{width:"570px ", marginRight:"1rem",}}
+              style={{width:"120% ", marginLett:"5rem",}}
              >
                <Input placeholder="Your last name" />
             </Form.Item>
@@ -178,7 +192,7 @@ const Contact = () => {
                   type: 'email', 
                 },
               ]}
-              style={{width:"570px" ,marginRight:"1rem",}}
+              style={{width:"120%" ,marginRight:"-5rem",}}
             >
               <Input placeholder="example@acme.com" />
             </Form.Item>
@@ -194,7 +208,7 @@ const Contact = () => {
                   required: true,
                 },
               ]}
-              style={{width:"570px" ,marginRight:"1rem",}}
+              style={{width:"120%" ,marginRight:"-5rem",}}
             >
             
               <Input placeholder=" Acme inc." />
@@ -214,13 +228,13 @@ const Contact = () => {
             label="Coutry"
             rules={[{ required: true, message: 'Please select country!' }]} >
               <Select placeholder="Please select country!">
-                <Option label="male" value="male">Male</Option>
-                <Option  label="female"value="female">Female</Option>
-                <Option label="other"value="other">Other</Option>
+                <Option label="male" value="male">South Africa</Option>
+                <Option  label="female"value="female">Zimbabwe</Option>
+                <Option label="other"value="other">Nigeria</Option>
               </Select>
           </Form.Item>
           
-          <Form.Item name={['user', 'introduction']} label="Message (optional)" style={{width:"1160px" ,marginRight:"2rem",}}>
+          <Form.Item name={['user', 'introduction']} label="Message (optional)" style={{width:"170%" ,marginRight:"2rem",}}>
           <Input placeholder=" Autosize hight based on content lines" />
             <Input.TextArea />
             
@@ -229,9 +243,12 @@ const Contact = () => {
           <PrivacyTag>By clicking “Submit,” I acknowledge receipt of the NectaTech  <PrivacyLink>Privacy Policy.</PrivacyLink> </PrivacyTag>
 
           <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 0 }}>
+            <Link to="/thankyoucard">
             <MyButton type="primary" htmlType="submit">
               Submit
             </MyButton>
+            </Link>
+            
           </Form.Item> 
           
         </Col>

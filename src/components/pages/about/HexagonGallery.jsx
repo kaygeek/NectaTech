@@ -14,107 +14,73 @@ import img_7 from "./about_images/img_7.svg";
 
 
 const HexagonContainer = styled.div`
-  max-width: 95%;
+  /* max-width: 100%; */
+  margin-left: -2rem;
+  margin-right: 4rem;
+  max-width: 1010px;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-auto-rows: 200px; 
-  /* grid-gap: 14px;  */
   grid-gap: 27px;
   padding-top: 100px;
   padding-bottom: 200px;
 
+ 
 `
+
 
 const Hex = styled.div`
-  display: flex;
-  position: relative;
-  width: 240px;
-  height: 265px;
+  width: 260px;
+  height: 275px;
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-
+  background: none;
+   
+  &:hover {
+  opacity:0.3;
+  color: linear-gradient(0deg, rgba(250, 237, 91, 0.5), rgba(250, 237, 91, 0.5)); 
   
-
+}
+  
+  img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit:cover;
+    transition: .3s ease;
+    backface-visibility: hidden;
+    
+  } 
  
- @media screen and (max-width:1024px){
-  width: 180px;
-  height: 205px;
-} 
-
-@media screen and (max-width:768px){
-  width: 135px;
-  height: 150px;
-}
-
-
-@media screen and (max-width:375px){
-  width: 78px;
-  height: 78px;
-}
-
-
-
 `
 
 
-const HexImage = styled.img`
- width: 100%;
- height: auto;
- display: block;
- object-fit:cover;
- transition: .3s ease;
- backface-visibility: hidden;
- opacity: 1;
-
-
- &:hover {
-  opacity: 0.3;
-  
-;
-
- }
-`
 
 
 const NameContainer = styled.div`
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+ width: 100%;
+ height: 100%;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ padding: 1;
+ text-align: center;
 
- &:hover {
-  opacity: 1;
-
-  h2{
-    color: #000000;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 23px;
-    line-height: 22px;
-    padding: 16px 32px;
-    text-align: center;
-    position: relative;
-    top:1rem; 
-    
+  &:hover{
+    opacity:1;
+    filter: linear-gradient(0deg, rgba(250, 237, 91, 0.5), rgba(250, 237, 91, 0.5)); 
   }
+ 
 
- }
 
 `
+
 
 
 
 
 
 function HexagonGallery() {
-
-  // const [bruce, courtney, kgaugelo, merveille, megan, carmyn] = team;
-
-
 
 const [card, setcard] = useState("")
 
@@ -137,54 +103,62 @@ function HandleClicks(id){
     <div>
 
       <HexagonContainer className="hexagon-gallery">
-        <Hex onClick={(e)=>HandleClicks(0)} key={0} className="hex">
-          <HexImage  src={img_1} alt="Bruce" />
+        <Hex onClick={(e)=>HandleClicks(0)} key={0} className="hex"> 
+          <img src={img_1} alt="Bruce" />        
           <NameContainer>
-          <h2>Bruce Kay</h2>
+          Bruce Kay
           </NameContainer>
           
             
         </Hex>
+
         <Hex className="hex">
-          <HexImage src={img_2} alt="NectaBee" />
+          <img src={img_2} alt="NectaBee" />
         </Hex>
+
         <Hex onClick={(e)=>HandleClicks(1)} key={1}  className="hex">
-          <HexImage src={img_3} alt="Courtney" />
+          <img src={img_3} alt="Courtney" />
           <NameContainer>
-          <h2>Courtney Joote</h2>
+          Courtney Joote
           </NameContainer>
           
         </Hex>
+
         <Hex onClick={(e)=>HandleClicks(2)} key={2}  className="hex">
-          <HexImage src={img_4} alt="Kgaugelo" />
+          <img src={img_4} alt="Kgaugelo" />
           <NameContainer>
-          <h2>Kgaugelo Marakalla</h2>
+          Kgaugelo Marakalla
           </NameContainer>
           
         </Hex>
+
         <Hex onClick={(e)=>HandleClicks(3)} key={3}  className="hex">
-          <HexImage src={img_5} alt="Merveille" />
+          <img src={img_5} alt="Merveille" />
           <NameContainer>
-          <h2>Merveille Van Eck Kay</h2>
+          Merveille Van Eck Kay
           </NameContainer>
           
         </Hex>
+
         <Hex onClick={(e)=>HandleClicks(4)} key={4}  className="hex">
-          <HexImage src={img_6} alt="Megan" />
+          <img src={img_6} alt="Megan" />
           <NameContainer>
-          <h2>Megan Serfontein</h2>
+          Megan Serfontein
           </NameContainer>
         
         </Hex>
+
         <Hex onClick={(e)=>HandleClicks(5)} key={5}  className="hex">
-          <HexImage src={img_7} alt="Carmyn" />
+          <img src={img_7} alt="Carmyn" />
           <NameContainer>
-          <h2>Carmyn vM</h2>
+          Carmyn vM
           </NameContainer>
          
         </Hex>
       </HexagonContainer>    
      {card}
+
+    
     </div>
   );
 }
