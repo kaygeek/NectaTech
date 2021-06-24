@@ -1,8 +1,9 @@
 import React from "react";
+import { Card } from 'antd';
 import Vector from "./contacts_imgs/Vector.svg";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Card } from 'antd';
+
 import Group from "./contacts_imgs/Group.svg";
 import image65 from "./contacts_imgs/image65.svg";
 import image66 from "./contacts_imgs/image66.svg";
@@ -34,7 +35,6 @@ const CardFrame = styled(Card)`
  margin-right:12rem;
  padding-bottom:9rem;
  /* overflow: hidden; */
-
 `
 
 const CardContent = styled.div`
@@ -51,7 +51,6 @@ margin-top: -11rem;
 width: 40%;
 `
 const Flower = styled.img`
-
  width: 100%;
  height: 200px;
 `
@@ -62,20 +61,20 @@ const Flower = styled.img`
 // width: 100%;
 // `
 
- 
+
  const ThankYouCard = () => {
     return ( 
         <Frame>
-      
+
       <Vectorimg src={Vector} alt="vector"/> 
-      
+
 
         <CardFrame > 
         <CardContent>
           <h2><b>Thank you for filling out your information!</b></h2>
           <p>We appreciate you contacting us. One of our team members will be in touch with you soon.</p>
           <p>Have a great day!</p>
-               
+
         </CardContent>
 
         <CardImages>
@@ -86,8 +85,8 @@ const Flower = styled.img`
 
        </CardFrame>
         </Frame> 
-       
+
      );
   }
 
-  export default ThankYouCard; 
+  export default ThankYouCard;
