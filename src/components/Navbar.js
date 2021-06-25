@@ -78,14 +78,14 @@ const  NavbarLink = styled(Link)`
 const Navbar = () => {
   
   const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+  // const [dropdown, setDropdown] = useState(false);
 
-  function handleClick() {
-    setClick(!click);
-  }
-  function closeMobileMenu() {
-    setClick(false);
-  }
+  // function handleClick() {
+  //   setClick(!click);
+  // }
+  // function closeMobileMenu() {
+  //   setClick(false);
+  // }
 
   return (
     <Nav>

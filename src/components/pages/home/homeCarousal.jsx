@@ -8,7 +8,6 @@ import second_slide from "./home_imgs/second_slide.svg";
 import third_slide from "./home_imgs/third_slide.svg";
 
 const CarouselStyle = styled(Carousel)` 
-  /* position: relative; */
   max-width: 100vw;
   height: 350px;
   background: #ffffff;

@@ -10,7 +10,10 @@ import styled from "styled-components";
 import nectap from "./projects_images/necta_imgs/nectap.svg";
 
 
+ import image65 from "../concact/contacts_imgs/image65.svg";
+//  import image66 from "../concact/contacts_imgs/imgae66.svg";
 
+import { Card } from 'antd';
 
 const Frame = styled.div`
   width: 100%;
@@ -78,7 +81,6 @@ const Image1 = styled.img`
   width: 27%;
   height: 320px;
   
-
 `
 const Image2 = styled.img`
   width: 55%;
@@ -107,6 +109,8 @@ function Necta() {
         <Image1 className="img1" src={nectap} alt="Vector 16 " />
         <Image2 className="img2" src={necta1} alt="image 16 " />
         </ImageContainer>
+
+
         <BtnViewSite  href="https://scrumpro.co.za/" className="scrumpro-btnViewSite" type="primary" size="large" block >
           View Site
         </BtnViewSite>
