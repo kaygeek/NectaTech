@@ -97,7 +97,7 @@ function BloomWeddings() {
     <Frame>
       <Projects />
         <TopVector src={Group73} alt="vector" />
-      <ContentContainer>
+      <ContentContainer id="bloomweddings">
         <LogoTitle>
           <Logo src={Group66} alt=" heading logo" />
         </LogoTitle>
@@ -113,7 +113,7 @@ function BloomWeddings() {
         <Image1 className="img1" src={Group1} alt="Vector 16 " />
         <Image2 className="img2" src={smartmockups_knh8mjgh1} alt="image 16 " />
         </ImageContainer>
-        <BtnViewSite   href="https://bloomweddings.co.za/login" className="scrumpro-btnViewSite" type="primary" size="large" block >
+        <BtnViewSite   href="https://bloomweddings.co.za/login" target="_blank" rel="noopener noreferrer" className="scrumpro-btnViewSite" type="primary" size="large" block >
           View Site
         </BtnViewSite>
       </ContentContainer>

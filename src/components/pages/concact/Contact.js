@@ -91,7 +91,7 @@ const { Option } = Select;
 
 const MyButton = styled(Button)`
  position:relative;
- width: 30%;
+ width: 120px;
  border-radius: 2px;
  margin-top: 1rem;
  background: #333333;
@@ -139,29 +139,22 @@ const Contact = () => {
       <Form layout="vertical" {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages} >
 
         <Row gutter={8}>
-          {/* <Space>
-
-          </Space> */}
-          <Col  span={12} xs={24} sm={24} md={24} lg={24} xl={12} style={{}}>
+          <Col  span={12} xs={24} sm={24} md={24} lg={24} xl={12}>
            <Form.Item name={['user', 'firstName']} label="First Name" rules={[
                 {
                   required: true,
                 },
               ]}>
-
-
               <Input placeholder="Your first name" />
            </Form.Item>
             
           </Col>
-          {/* span={12} */}
           <Col span={12} xs={24} sm={24} md={24} lg={24} xl={12}>
            <Form.Item name={['user', 'lastName']} label="Last Name" rules={[
                 {
                   required: true,
                 },
-              ]} 
-             >
+              ]}>
                <Input placeholder="Your last name" />
             </Form.Item>
             
@@ -181,14 +174,11 @@ const Contact = () => {
                   required: true,
                   type: 'email', 
                 },
-              ]}
-              
-            >
+              ]}>
               <Input placeholder="example@acme.com" />
             </Form.Item>
         
          </Col>
-
           <Col span={12} xs={24} sm={24} md={24} lg={24} xl={12}>
             <Form.Item
               name={['user', 'company']}

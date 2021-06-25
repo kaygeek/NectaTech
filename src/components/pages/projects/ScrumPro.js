@@ -92,7 +92,7 @@ function ScrumPro() {
     <Frame>
       <Projects />
         <TopVector src={Group73} alt="vector" />
-      <ContentContainer>
+      <ContentContainer id="scrumpro">
         <LogoTitle>
           <Logo src={Group63} alt="ScrumPro heading logo" />
         </LogoTitle>
@@ -109,7 +109,7 @@ function ScrumPro() {
           <Image2 className="img2" src={image16} alt="image 16 " />
           <Image3 className="img3" src={image15} alt="image 15 " />
         </ImageContainer>
-        <BtnViewSite  href="https://scrumpro.co.za/" className="scrumpro-btnViewSite" type="primary" size="large" block >
+        <BtnViewSite  href="https://scrumpro.co.za/" target="_blank" rel="noopener noreferrer" className="scrumpro-btnViewSite" type="primary" size="large" block >
           View Site
         </BtnViewSite>
       </ContentContainer>

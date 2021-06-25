@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-scroll";
 import "./HexagonGallery.css";
 import styled from "styled-components";
 import team from "./Team";
@@ -103,7 +104,7 @@ function HandleClicks(id){
     <div>
 
       <HexagonContainer className="hexagon-gallery">
-        <Hex onClick={(e)=>HandleClicks(0)} key={0} className="hex"> 
+        <Hex onClick={(e)=>HandleClicks(0)} key={0} className="hex" smooth={true}  > 
           <img src={img_1} alt="Bruce" />        
           <NameContainer>
           Bruce Kay
