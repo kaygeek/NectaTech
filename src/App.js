@@ -20,15 +20,15 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" exact component={Home} />
-        <Route exact path="/About" component={About} />
-        <Route exact path="/Projects" component={Projects} />
-        <Route exact path="/Contact" component={Contact} />
-        <Route exact path="/Scrumpro" component={ScrumPro} />
-        <Route exact path="/Playpro" component={PlayPro} />
-        <Route exact path="/Nectatrack" component={NectaTrack} />
-        <Route exact path="/Necta" component={Necta} />
-        <Route exact path="/BloomWeddings" component={BloomWeddings} />
-        <Route exact path="/ThankYouCard" component={ThankYouCard} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/projects" component={Projects} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/scrumpro" component={ScrumPro} />
+        <Route exact path="/playpro" component={PlayPro} />
+        <Route exact path="/necta-track" component={NectaTrack} />
+        <Route exact path="/necta" component={Necta} />
+        <Route exact path="/bloom-weddings" component={BloomWeddings} />
+        <Route exact path="/thank-you-card" component={ThankYouCard} />
       </Switch>
       <Footer />
     </Router>
