@@ -2,7 +2,7 @@ import React from "react";
 import Vector from "./contacts_imgs/Vector.svg";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Form, Input, Button, Select } from 'antd';
+import { Form, Input, Button, Select,Space } from 'antd';
 import { Row, Col } from "antd";
 import { AiOutlineCheck } from "react-icons/ai";
 
@@ -12,6 +12,7 @@ const Frame = styled.div`
  background-color: #E5E5E5;
  width: 100%;
  height:1020px;
+ overflow: hidden;
 
 `
 
@@ -19,22 +20,21 @@ const Frame = styled.div`
 const VectorDiv = styled.div`
  width: 100%;
  overflow: hidden;
+ z-index:-1;
 
 `
 
 const FormBody = styled.div`
-position: absolute;
- display:flex;
- top: 9rem;  
- width: auto;
+ position: absolute;
+ margin-top:-25rem; 
+ left:40%;
+ width: 50%;
  padding: 4rem;
- /* margin-top: -27rem; */
- margin-bottom: 1rem;
- margin-left:  37rem;
- margin-right: 12rem;
- background: #FFFFFF;
- z-index: 1;
  overflow: hidden;
+ margin-bottom: 1rem;
+ background: #FFFFFF;
+ margin-left:2rem;
+ 
 `
 
 const PrivacyTag = styled.div`
@@ -50,36 +50,30 @@ const PrivacyLink = styled(Link)`
 
 const Content = styled.div`
  margin-top: 3rem;
- margin-left: 6rem;
- margin-right:40rem;
+ margin-left: 5rem;
+ margin-right:1.5rem;
  list-style: none;
+ width: 30%;
 
 ul{
-  margin-left:-2rem;
+  margin-left:-2.5rem;
   list-style: none;
   line-height: 52px;
   color: black;
   list-style: none;
   font-size: 1rem;
   text-align: left;
+  
 }
-
-
-
 `
 
-const ContentList = styled.div`
- list-style: none;
- font-size: 1rem;
- text-align: left;
-`
 
 const layout = {
   labelCol: {
-    span: 10,
+    span: 12,
   },
   wrapperCol: {
-    span: 12,
+    span: 24,
   },
 };
 /* eslint-disable no-template-curly-in-string */
@@ -99,7 +93,7 @@ const { Option } = Select;
 
 const MyButton = styled(Button)`
  position:relative;
- width: 30%;
+ width: 120px;
  border-radius: 2px;
  margin-top: 1rem;
  background: #333333;
@@ -136,53 +130,44 @@ const Contact = () => {
        <Content>
          <h2>Contact Us</h2>
          <ul>
-         <li><AiOutlineCheck/>Reason to contact us</li>
-         <li><AiOutlineCheck/>Description of what we can do for your company</li>
-         <li><AiOutlineCheck/>Reason to contact us</li>          
+           <Link to=""><li><AiOutlineCheck/>Reason to contact us</li></Link>
+           <Link to=""><li><AiOutlineCheck/>Description of what we can do for your company</li></Link>
+           <Link to=""><li><AiOutlineCheck/>Reason to contact us</li> </Link>          
          </ul>
        </Content>
 
        
       <FormBody>
       <Form layout="vertical" {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages} >
-        <Row>
-          <Col span={12}>
-           <Form.Item
-              name={['user', 'firstName']}
-              label="First Name"
-              rules={[
+
+        <Row gutter={8}>
+          <Col  span={12} xs={24} sm={24} md={24} lg={24} xl={12}>
+           <Form.Item name={['user', 'firstName']} label="First Name" rules={[
                 {
                   required: true,
                 },
-              ]}
-              style={{width:"120%" ,marginRight:"5rem",}}
-             >
+              ]}>
               <Input placeholder="Your first name" />
            </Form.Item>
             
           </Col>
-
-          <Col span={12}>
-           <Form.Item
-              name={['user', 'lastName']}
-              label="Last Name"
-              rules={[
+          <Col span={12} xs={24} sm={24} md={24} lg={24} xl={12}>
+           <Form.Item name={['user', 'lastName']} label="Last Name" rules={[
                 {
                   required: true,
                 },
-              ]}
-
-              style={{width:"120% ", marginLett:"5rem",}}
-             >
+              ]}>
                <Input placeholder="Your last name" />
             </Form.Item>
             
-        </Col>
+            </Col>
 
-          </Row>
-
-        <Row>
-          <Col span={12}>
+        </Row>
+          
+          
+        <Row gutter={8}>
+              
+          <Col span={12} xs={24} sm={24} md={24} lg={24} xl={12}>
           <Form.Item
               name={['user', 'workEmail']}
               label="Work Email"
@@ -191,73 +176,60 @@ const Contact = () => {
                   required: true,
                   type: 'email', 
                 },
-              ]}
-              style={{width:"120%" ,marginRight:"-5rem",}}
-            >
+              ]}>
               <Input placeholder="example@acme.com" />
             </Form.Item>
         
-          </Col>
-
-          <Col span={12}>
-          <Form.Item
+         </Col>
+          <Col span={12} xs={24} sm={24} md={24} lg={24} xl={12}>
+            <Form.Item
               name={['user', 'company']}
               label="Campany"
               rules={[
                 {
                   required: true,
                 },
-              ]}
-              style={{width:"120%" ,marginRight:"-5rem",}}
-            >
-            
+              ]}>
               <Input placeholder=" Acme inc." />
-            </Form.Item>
-            
+             </Form.Item>
           </Col>
           
         </Row>
 
-        <Col>
-
-
+      <Col>
+        <Row >
         
-        {/* /////////////////////// */}
-          <Form.Item
-            name={["user","coutry"]}
-            label="Coutry"
+          <Form.Item style={{width:"50%"}} name={["user","coutry"]} label="Country"
             rules={[{ required: true, message: 'Please select country!' }]} >
               <Select placeholder="Please select country!">
-                <Option label="male" value="male">South Africa</Option>
-                <Option  label="female"value="female">Zimbabwe</Option>
-                <Option label="other"value="other">Nigeria</Option>
+                <Option label="South Africa" value="SouthArica">South Africa</Option>
+                <Option  label="Zimbabwe"value="Zimbabwe">Zimbabwe</Option>
+                <Option label="Nigeria"value="Nigeria">Nigeria</Option>
               </Select>
           </Form.Item>
-          
-          <Form.Item name={['user', 'introduction']} label="Message (optional)" style={{width:"170%" ,marginRight:"2rem",}}>
-          <Input placeholder=" Autosize hight based on content lines" />
-            <Input.TextArea />
-            
+        </Row>
+         
+        <Row  xs={24} sm={24} md={24} lg={24} xl={24}>
+       
+          <Form.Item name={['user', 'introduction']} label="Message (optional)">
+           <Input placeholder=" Autosize hight based on content lines" />
+            <Input.TextArea /> 
           </Form.Item>
+        </Row>
+          
 
           <PrivacyTag>By clicking “Submit,” I acknowledge receipt of the NectaTech  <PrivacyLink>Privacy Policy.</PrivacyLink> </PrivacyTag>
 
           <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 0 }}>
             <Link to="/thankyoucard">
-            <MyButton type="primary" htmlType="submit">
-              Submit
-            </MyButton>
+              <MyButton type="primary" htmlType="submit">
+               Submit
+              </MyButton>
             </Link>
-            
-          </Form.Item> 
-          
-        </Col>
-          
+          </Form.Item>        
+        </Col>     
       </Form>
-
       </FormBody>
-      
-
     </Frame>
   )
 }

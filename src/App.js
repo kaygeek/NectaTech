@@ -7,8 +7,8 @@ import About from "./components/pages/about/About";
 import Projects from "./components/pages/projects/Projects";
 import Contact from "./components/pages/concact/Contact";
 import Footer from "./components/Footer";
-import PlayPro from "./components/pages/projects/PlayPro";
-import ScrumPro from "./components/pages/projects/ScrumPro";
+import Playpro from "./components/pages/projects/PlayPro";
+import Scrumpro from "./components/pages/projects/ScrumPro";
 import NectaTrack from "./components/pages/projects/NectaTrack";
 import Necta from "./components/pages/projects/Necta";
 import BloomWeddings from "./components/pages/projects/BloomWeddings";
@@ -23,14 +23,13 @@ function App() {
         <Route exact path="/About" component={About} />
         <Route exact path="/Projects" component={Projects} />
         <Route exact path="/Contact" component={Contact} />
-        <Route exact path="/ScrumPro" component={ScrumPro} />
-        <Route exact path="/PlayPro" component={PlayPro} />
+        <Route exact path="/Scrumpro" component={Scrumpro} />
+        <Route exact path="/Playpro" component={Playpro} />
         <Route exact path="/NectaTrack" component={NectaTrack} />
         <Route exact path="/Necta" component={Necta} />
         <Route exact path="/BloomWeddings" component={BloomWeddings} />
         <Route exact path="/ThankYouCard" component={ThankYouCard} />
       </Switch>
-
       <Footer />
     </Router>
   );

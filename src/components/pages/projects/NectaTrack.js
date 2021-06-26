@@ -84,7 +84,7 @@ function NectaTrack() {
     <Frame>
       <Projects />
         <TopVector src={Group73} alt="vector" />
-      <ContentContainer>
+      <ContentContainer id="nectatrack">
         <LogoTitle>
           <Logo src={NectaTrack_Logo} alt="ScrumPro heading logo" />
         </LogoTitle>
@@ -100,7 +100,7 @@ function NectaTrack() {
         <img src={image14} alt="Vector 16 " />
         <img src={smartmockups_kaqomkl8} alt="image 16 " />
         </ImageContainer>
-        <BtnViewSite  href="https://www.necta.tech/NectaTrack" className="scrumpro-btnViewSite" type="primary" size="large" block >
+        <BtnViewSite  href="https://www.necta.tech/NectaTrack" target="_blank" rel="noopener noreferrer" className="scrumpro-btnViewSite" type="primary" size="large" block >
           View Site
         </BtnViewSite>
       </ContentContainer>

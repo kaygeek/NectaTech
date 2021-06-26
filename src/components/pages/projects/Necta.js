@@ -80,7 +80,7 @@ const BtnViewSite = styled(Button)`
 const Image1 = styled.img`
   width: 27%;
   height: 320px;
-  
+
 `
 const Image2 = styled.img`
   width: 55%;
@@ -93,7 +93,7 @@ function Necta() {
     <Frame>
       <Projects />
         <TopVector src={Group73} alt="vector" />
-      <ContentContainer>
+      <ContentContainer id="necta">
         <LogoTitle>
           <Logo src={Group64} alt="ScrumPro heading logo" />
         </LogoTitle>
@@ -111,7 +111,7 @@ function Necta() {
         </ImageContainer>
 
 
-        <BtnViewSite  href="https://scrumpro.co.za/" className="scrumpro-btnViewSite" type="primary" size="large" block >
+        <BtnViewSite  href="https://scrumpro.co.za/" target="_blank" rel="noopener noreferrer" className="scrumpro-btnViewSite" type="primary" size="large" block >
           View Site
         </BtnViewSite>
       </ContentContainer>

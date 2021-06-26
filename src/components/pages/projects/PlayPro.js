@@ -88,7 +88,7 @@ function PlayPro() {
     <Frame>
     <Projects />
       <TopVector src={Group73} alt="vector" />
-    <ContentContainer>
+    <ContentContainer id="playpro">
       <LogoTitle>
         <Logo src={flat} alt="Playpro  heading logo" />
       </LogoTitle>
@@ -104,7 +104,7 @@ function PlayPro() {
       <Image1 className="img1" src={image12} alt="Vector 16 " />
       <Image2 className="img2" src={playerprofile2} alt="image 16 " />
       </ImageContainer>
-      <BtnViewSite  href="https://www.necta.tech/PlayPro" className="scrumpro-btnViewSite" type="primary" size="large" block >
+      <BtnViewSite  href="https://www.necta.tech/PlayPro" target="_blank" rel="noopener noreferrer" className="scrumpro-btnViewSite" type="primary" size="large" block >
         View Site
       </BtnViewSite>
     </ContentContainer>
