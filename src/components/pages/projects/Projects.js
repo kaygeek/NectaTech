@@ -21,29 +21,29 @@ function Projects() {
       </div>
       <div className="projects-hex-gallery">
         <div className="hex">
-          <Link to="scrumpro" smooth={true} duration={1000} className="hex">
+          <Link to="/scrumpro" smooth={true} duration={1000} className="hex">
             <img src={img_1} alt="ScrumPro" />
           </Link>
         </div>
 
         <div className="hex">
-          <Link to="playpro"className="hex">
+          <Link to="/playpro"className="hex">
             <img src={img_2} alt="PLAYPRO" />
           </Link>
         </div>
 
         <div className="hex">
-          <Link to="nectatrack"className="hex">
+          <Link to="/necta-track"className="hex">
             <img src={img_3} alt="NectaTrack" />
           </Link>
         </div>
         <div className="hex">
-          <Link to="necta"  className="hex">
+          <Link to="/necta"  className="hex">
             <img src={img_4} alt="necta" />
           </Link>
         </div>
         <div className="hex">
-          <Link to="bloomweddings"  className="hex">
+          <Link to="/bloom-weddings"  className="hex">
             <img src={img_5} alt="Bloom Weddings" />
           </Link>
         </div>
