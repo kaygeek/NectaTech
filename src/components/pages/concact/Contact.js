@@ -12,6 +12,7 @@ const Frame = styled.div`
  background-color: #E5E5E5;
  width: 100%;
  height:1020px;
+ overflow: hidden;
 
 `
 
@@ -19,21 +20,20 @@ const Frame = styled.div`
 const VectorDiv = styled.div`
  width: 100%;
  overflow: hidden;
+ z-index:-1;
 
 `
 
 const FormBody = styled.div`
-position: absolute;
- display:flex;
- top: 9rem;  
- left:37rem;
- width: auto;
+ position: absolute;
+ margin-top:-25rem; 
+ left:40%;
+ width: 50%;
  padding: 4rem;
+ overflow: hidden;
  margin-bottom: 1rem;
- /* margin-left:  37rem; */
- margin-right: 12rem;
  background: #FFFFFF;
- z-index: 1;
+ margin-left:2rem;
  
 `
 
@@ -50,9 +50,10 @@ const PrivacyLink = styled(Link)`
 
 const Content = styled.div`
  margin-top: 3rem;
- margin-left: 6rem;
- margin-right:20rem;
+ margin-left: 5rem;
+ margin-right:1.5rem;
  list-style: none;
+ width: 30%;
 
 ul{
   margin-left:-2.5rem;
@@ -62,6 +63,7 @@ ul{
   list-style: none;
   font-size: 1rem;
   text-align: left;
+  
 }
 `
 
@@ -197,12 +199,12 @@ const Contact = () => {
       <Col>
         <Row >
         
-          <Form.Item style={{width:"50%"}} name={["user","coutry"]} label="Coutry"
+          <Form.Item style={{width:"50%"}} name={["user","coutry"]} label="Country"
             rules={[{ required: true, message: 'Please select country!' }]} >
               <Select placeholder="Please select country!">
-                <Option label="male" value="SouthArica">South Africa</Option>
-                <Option  label="female"value="Zimbabwe">Zimbabwe</Option>
-                <Option label="other"value="Nigeria">Nigeria</Option>
+                <Option label="South Africa" value="SouthArica">South Africa</Option>
+                <Option  label="Zimbabwe"value="Zimbabwe">Zimbabwe</Option>
+                <Option label="Nigeria"value="Nigeria">Nigeria</Option>
               </Select>
           </Form.Item>
         </Row>
