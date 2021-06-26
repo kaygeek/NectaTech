@@ -43,7 +43,7 @@ function Projects() {
           </Link>
         </div>
         <div className="hex">
-          <Link to="bloom-weddings"  className="hex">
+          <Link to="/bloom-weddings"  className="hex">
             <img src={img_5} alt="Bloom Weddings" />
           </Link>
         </div>
