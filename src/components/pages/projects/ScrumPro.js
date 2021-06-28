@@ -30,24 +30,32 @@ const ContentContainer = styled.div`
   align-items: center;
   p {
     width: 70%;
-    height: 116px;
+    /* height: 116px; */
     font-weight: normal;
     font-size: 19px;
     line-height: 158%;
     padding-bottom: 5px;
+    /* margin-bottom: -2em; */
   }
 `
 
 const LogoTitle = styled.div`
   width: 70%;
   display: flex;
+ 
 `
 
 const Logo = styled.img`
   width: 270px;
   height: 80px;
   padding-bottom: 2rem;
-
+  margin-left:-1rem;
+  @media  screen and (max-width:425px){
+    width: 232px;
+  }
+  @media  screen and (max-width:320px){
+    width:182px;
+  }
 `
 
 const ImageContainer = styled.div`
@@ -57,6 +65,16 @@ const ImageContainer = styled.div`
   margin-left: 13rem;
   margin-right: 13rem;
   margin-bottom: 4rem;
+  @media  screen and (max-width: 1110px){
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+  }
+  @media  screen and (max-width: 894px){
+    margin-top: 5rem;
+  }
+  @media  screen and (max-width: 894px){
+    margin-top: 2rem;
+  }
 
 `
 const BtnViewSite = styled(Button)`
@@ -96,13 +114,10 @@ function ScrumPro() {
         <LogoTitle>
           <Logo src={Group63} alt="ScrumPro heading logo" />
         </LogoTitle>
+        <p> Step up and get noticed with your solution to an editable, shareable Rugby CV!</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec non massa
-          orci enim. Nec amet mollis eget mauris praesent neque, augue ut.
-          Commodo, leo, sollicitudin velit amet. Ac et tempor lectus gravida
-          senectus enim habitasse quis enim. Vitae integer ullamcorper massa
-          ipsum. Amet, feugiat vitae vitae at sed viverra tempus. Odio habitant
-          nisi congue orci purus facilisis porttitor.
+       Load your profile with content that sets you apart. From your stats to your best plays, 
+       ScrumPro will let you put your best foot forward to get ahead of the game.
         </p>  
         <ImageContainer>
           <Image1 className="img1" src={player} alt="Vector 16 " />

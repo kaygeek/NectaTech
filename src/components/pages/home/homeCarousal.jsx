@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import { Carousel } from "antd";
 import "antd/dist/antd.css";
 import "./homeCarouselStyle.css";
@@ -6,12 +6,15 @@ import styled from 'styled-components';
 import first_slide from "./home_imgs/first_slide.svg";
 import second_slide from "./home_imgs/second_slide.svg";
 import third_slide from "./home_imgs/third_slide.svg";
+import { LeftOutlined } from '@ant-design/icons'
+import { RightOutlined } from '@ant-design/icons'
+
+
 
 const CarouselStyle = styled(Carousel)` 
   max-width: 100vw;
-  height: 350px;
   background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
 `
 
 const Frame = styled.div`
@@ -33,22 +36,37 @@ const Frame = styled.div`
     font-size: 25px;
     margin: 0;
   }
- @media (min-width:791px){
 
+  @media  screen and (max-width:700px){
+    display: flex;
+    flex-direction: column-reverse;
+
+    p{
+    width: 70%;
+    max-width: 600px;
+    font-size: 20px;
+    text-align: center;
+    }
   }
+ 
 `
 
-function HomeCarousel() {
-  return (
-    <CarouselStyle autoplay>
 
+
+
+function homeCarousel() {
+
+
+
+    return (
+      <CarouselStyle autoplay>
+    
     <Frame>
-      <p >
-        <b>NectaTech</b> builds robust and scalable software platforms,
-           geared towards putting the power in the user’s hands.
+      <p>
+      <b>NectaTech</b> builds robust and scalable software platforms,
+       geared towards putting the power in the user’s hands.
       </p>
       <img src={first_slide} alt="laptop" />
-
     </Frame>
 
     <Frame>
@@ -61,14 +79,24 @@ function HomeCarousel() {
 
     <Frame>
       <p>
-          Our Team keeps working to bring the most sustainable and fresh
-          tech to the table to make sure our platforms are sustainable and
-          adaptable.
-      </p>
-      <img src={third_slide} alt="laptop" />
+      Our Team keeps working to bring the most sustainable and fresh
+      tech to the table to make sure our platforms are sustainable and
+      adaptable.
+       </p>
+       <img src={third_slide} alt="laptop" />
     </Frame>
-    </CarouselStyle>
-  );
+   
+</CarouselStyle>
+
+    );
+  
 }
 
-export default HomeCarousel;
+
+
+export default homeCarousel;
+
+
+
+
+

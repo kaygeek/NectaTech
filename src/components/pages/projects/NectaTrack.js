@@ -28,15 +28,19 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+
   p {
     width: 70%;
     height: 116px;
     font-weight: normal;
     font-size: 19px;
     line-height: 158%;
-    padding-bottom: 5px;
+    margin-bottom: -2em;
   }
 `
+
+
 
 const LogoTitle = styled.div`
   width: 70%;
@@ -62,8 +66,19 @@ img{
   width: 50%;
 }
  
-
-
+@media  screen and (max-width:425px){
+  width: 76%;
+  margin-top: 22rem;
+}
+@media  screen and (max-width:320px){
+  margin-top: 14rem;
+}
+@media  screen and (max-width:375px){
+  margin-top: 24rem;
+}
+@media screen and (max-width:320px){
+  margin-top: 30rem;
+}
 `
 const BtnViewSite = styled(Button)`
   width: 300px;
@@ -88,13 +103,10 @@ function NectaTrack() {
         <LogoTitle>
           <Logo src={NectaTrack_Logo} alt="ScrumPro heading logo" />
         </LogoTitle>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec non massa
-          orci enim. Nec amet mollis eget mauris praesent neque, augue ut.
-          Commodo, leo, sollicitudin velit amet. Ac et tempor lectus gravida
-          senectus enim habitasse quis enim. Vitae integer ullamcorper massa
-          ipsum. Amet, feugiat vitae vitae at sed viverra tempus. Odio habitant
-          nisi congue orci purus facilisis porttitor.
+        <p>Transparent | Accountable | Efficient</p>
+        <p>Ensure complete visibility and accountability in your business with NectaTrack.
+           Our advanced assign-and-track tech and easy to use QR system will maintain a line 
+           of sight for your business on all previous and current interactions; from staff and customers, to assets and stock.
         </p>  
         <ImageContainer>
         <img src={image14} alt="Vector 16 " />

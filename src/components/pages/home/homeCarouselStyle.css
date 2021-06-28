@@ -27,20 +27,14 @@
   height: 127px;
 }
 
-.carousel-container .description2 {
+.carousel-container 
+.description2 
+.description3 {
   position: relative;
   top: 1rem;
   left: 19rem;
   width: 597px;
 }
-
-.carousel-container .description3 {
-  position: relative;
-  top: 1rem;
-  left: 19rem;
-  width: 597px;
-}
-
 
 
 /* Carousel slide images */

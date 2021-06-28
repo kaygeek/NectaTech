@@ -11,6 +11,12 @@ const MyButton = styled(Button)`
   border-color: black;
   z-index: 10;
   margin-right: 15px;
+
+  @media  screen and (max-width:425px){
+    margin-left: 2rem;
+    width: 300px;
+    margin-bottom: 2rem;
+  }
 `
 
 function BtnContactAbout(){

@@ -6,8 +6,6 @@ import HexagonGallery from "./HexagonGallery.jsx";
 
 
 const AboutBody = styled.div`
- display: flex;
- flex-direction: column;
  justify-content: flex-start;
  align-items: center;
  width: 100%;
@@ -15,18 +13,35 @@ const AboutBody = styled.div`
 `
 
 const AboutContainer = styled.div`
-  width: 70%;
-  margin-top: 3rem;
+  width: 74%;
+  padding-top: 7rem;
+  margin-top: 0rem;
+  margin-left: 13rem;
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  h1 {
-    margin: 30px 0;
-    font-weight: bold;
+  text-align: left;
+  @media  screen and (max-width:1024px){
+    max-width: 80%;
+    margin-left: 8rem;
   }
+  @media  screen and (max-width:425px){
+    margin-left: 5rem;
+  }
+  @media  screen and (max-width:375px){
+    margin-left: 4rem;
+  }
+  @media  screen and (max-width:320px){
+    margin-left: 3rem;
+  }
+  h1 {
+    margin: 14px 0;
+    font-weight: bold;
+    margin-top: -2rem;
+  }
+ 
 
   & p {
-    width: 100%;
-    height: 116px;
+    width: 96%;
     font-style: normal;
     font-weight: normal;
     font-size: 21px;
@@ -37,7 +52,9 @@ const AboutContainer = styled.div`
     margin-bottom: 2rem;
     margin-top:2rem;
     padding-bottom: 5px;
-
+    @media  screen and (max-width:768px){
+      width: 90%;
+    }
   }
 `
 function About() {
@@ -58,9 +75,8 @@ function About() {
         to give you peace of mind and more importantly increase your revenue!
       </p>
 
-      <HexagonGallery />
-    
       </AboutContainer>
+      <HexagonGallery />
   </AboutBody>
   );
 }
