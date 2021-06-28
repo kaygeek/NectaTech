@@ -14,7 +14,6 @@ const MyButton = styled(Button)`
   &:hover {
     background: #333333;
     border-color: gold;
-
   }
 
 `

@@ -26,6 +26,7 @@ const Fram = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
+    margin-left:1rem;
   }
  `
 

@@ -14,6 +14,10 @@ const ViewOurProjects = styled(Button)`
  border-radius: 2px;
  z-index: 10;
  margin-left: 15px;
+ &:hover {
+      border: gold;
+      color: gold;
+    }
  @media  screen and (max-width:648px){
   width: 90%;
   margin-left: -1rem;

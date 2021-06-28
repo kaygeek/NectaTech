@@ -13,6 +13,10 @@ const MyButton = styled(Button)`
     /* z-index: 1; */
     font-size: 18px;
     margin-left: 15px;
+    &:hover {
+      border: gold;
+      color: gold;
+    }
     @media  screen and (max-width:551px){
       width: 284%;
       margin-left: -88px;

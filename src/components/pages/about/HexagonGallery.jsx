@@ -52,8 +52,9 @@ const Row1 = styled.div`
 const Row2 = styled.div`
  display: flex;
  flex-direction: row;
+ margin-top:0px;
  @media  screen and (max-width:425){
-  margin-top: -9rem;
+  margin-top: -10rem;
 
  }
 

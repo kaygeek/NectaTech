@@ -16,7 +16,7 @@ const CardFrame = styled(Card)`
  margin-right: -5rem;
  padding:5px;
  overflow: hidden;
- margin-top: -5rem;
+ margin-top: 4rem;
 
 
  @media screen and (max-width:1024px) {
@@ -151,7 +151,7 @@ const CardBtns = styled.div`
     }
 
     @media  screen and (max-width:320px){
-      width: 60%;
+     width: 60%;
     margin: -1px 54px;
     }
 `

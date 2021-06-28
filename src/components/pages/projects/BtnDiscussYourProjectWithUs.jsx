@@ -9,13 +9,19 @@ const BtnDiscussProjectWithUs = styled(Button)`
  box-sizing: border-box;
  border-radius: 2px;
  z-index: 10;
+ border-color: black;
  background: #333333;
  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
  margin-right: 15px;
+ &:hover {
+    background: #333333;
+    border-color: gold;
+  }
  @media  screen and (max-width:648px){
   width: 90%;
   margin-bottom: 1rem;
  }
+
 `
 
 function BtnDiscussYourProjectWithUs(){

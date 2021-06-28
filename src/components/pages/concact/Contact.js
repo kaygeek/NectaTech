@@ -118,9 +118,15 @@ const MyButton = styled(Button)`
  position:relative;
  width: 120px;
  border-radius: 2px;
+ border-color: black;
  margin-top: 1rem;
  background: #333333;
  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+ &:hover {
+    background: #333333;
+    border-color: gold;
+  }
 
 `
 
