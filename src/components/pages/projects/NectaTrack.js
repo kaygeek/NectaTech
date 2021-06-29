@@ -89,6 +89,12 @@ const BtnViewSite = styled(Button)`
   border-radius: 2px;
   border: none;
   z-index: 10;
+  @media  screen and (max-width:320px){
+    width: 221px;
+  }
+  @media  screen and (max-width:425px){
+    width: 255px;
+  }
 `
 
 

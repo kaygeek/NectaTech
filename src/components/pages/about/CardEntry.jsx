@@ -35,9 +35,16 @@ const CardFrame = styled(Card)`
   margin-left: 2rem;
 }
 @media  screen and (max-width:320px){
+    /* width: 85%;
+    height: 720px;
+    margin-left: 22px;
+    margin-top: -189px; */
+
+
     width: 85%;
     height: 720px;
     margin-left: 22px;
+    margin-top: -2rem;
 }
 
 `
@@ -54,7 +61,7 @@ const CardImage = styled.img`
     width: 269px;
  }
  @media  screen and (max-width:320px){
-  width: 220px;
+  width: 202px;
  }
 `
 const CardContent = styled.div`
@@ -65,9 +72,6 @@ const CardContent = styled.div`
  margin-top: 2rem;
  padding: 3.5rem;
  width: 84%;
- @media  screen and (max-width:425px){
-
- }
 `
 
 const Title = styled.div`
@@ -81,7 +85,12 @@ const Title = styled.div`
   margin-left: -15rem;
  }
  @media  screen and (max-width:320px){
-   flex-direction: column;
+    padding-bottom: 2rem;
+    margin-right: 1rem;
+    margin-top: -2rem;
+    flex-direction: column;
+
+    
  }
 ` 
 
@@ -133,6 +142,8 @@ const CardDescription = styled.div`
     padding-left: 1rem;
     padding-right: 24rem;
     margin-top: 13rem;
+
+    
   }
 `
 

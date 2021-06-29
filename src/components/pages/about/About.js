@@ -55,6 +55,13 @@ const AboutContainer = styled.div`
     @media  screen and (max-width:768px){
       width: 90%;
     }
+    @media  screen and (max-width:320px){
+      width: 90%;
+      font-size: 16px;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      
+    }
   }
 `
 function About() {

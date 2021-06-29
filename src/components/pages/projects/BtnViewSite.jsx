@@ -20,6 +20,8 @@ import styeled from "styeled-components";
   @media  screen and (max-width: 894px){
     margin-bottom: 1rem;
   }
+
+ 
  `
 
 function BtnViewSite(){

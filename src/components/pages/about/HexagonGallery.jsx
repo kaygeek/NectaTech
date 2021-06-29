@@ -35,6 +35,8 @@ const HexagonContainer = styled.div`
 
   @media  screen and (max-width:320px){
     margin-left: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
   }
 
 `
@@ -53,15 +55,24 @@ const Row2 = styled.div`
  display: flex;
  flex-direction: row;
  margin-top:0px;
- @media  screen and (max-width:425){
+ @media  screen and (max-width:425px){
   margin-top: -10rem;
-
+ }
+ @media screen and (max-width:320px){
+    padding-bottom: 2rem;
+    margin-top: -2rem; 
+    margin-right: 0rem;
  }
 
 `
 const Hex = styled.div`
   width: 260px;
   height: 275px;
+
+  @media  screen and (max-width:320px){
+    width: 264px;
+    height: 130px;
+  }
   `
 
 

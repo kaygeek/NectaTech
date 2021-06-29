@@ -22,6 +22,12 @@ const ViewOurProjects = styled(Button)`
   width: 90%;
   margin-left: -1rem;
  }
+ @media  screen and (max-width:425px){
+  width: 66%;
+ }
+ @media  screen and (max-width:320px){
+  width: 80%;
+ }
 `
 
 

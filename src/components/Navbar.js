@@ -5,7 +5,8 @@ import logo from "./logo.svg";
 
 
 const Nav = styled.nav`
- /* position: fixed; */
+ position: sticky;
+ top:0;
  display: flex;
  flex-direction: row;
  height: 65px;
@@ -15,8 +16,6 @@ const Nav = styled.nav`
  background: #ffffff;
  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
  z-index: 10px;
- 
-
  @media  screen and (max-width:700px){
   height: 100px;
   display: flex;
@@ -75,8 +74,6 @@ const  NavbarLink = styled(Link)`
 &:hover {
   color: #faed5b;
 }
-
-
 `
 
 
@@ -84,7 +81,7 @@ const  NavbarLink = styled(Link)`
 const Navbar = () => {
   
   return (
-    <Nav>
+    <Nav className="sticky-nav">
        <NavbarLogo to="/">
         <img height='50px' width='auto' src={logo} className="App-logo" alt="logo" />
       </NavbarLogo>

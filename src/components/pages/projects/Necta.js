@@ -35,13 +35,16 @@ const ContentContainer = styled.div`
   align-items: center;
   p {
     width: 70%;
-    /* height: 116px; */
     font-weight: normal;
     font-size: 19px;
     line-height: 158%;
     padding-bottom: 5px;
     margin-bottom: 1em;
     
+  }
+
+  @media  screen and (max-width:320px){
+    font-size: 16px;
   }
 `
 
@@ -97,6 +100,13 @@ const BtnViewSite = styled(Button)`
   border-radius: 2px;
   border: none;
   z-index: 10;
+
+  @media  screen and (max-width:320px){
+    width: 221px;
+  }
+  @media  screen and (max-width:425px){
+    width: 255px;
+  }
 `
 
 

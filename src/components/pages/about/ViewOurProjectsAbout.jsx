@@ -12,6 +12,9 @@ const MyButton = styled(Button)`
  border-radius: 2px;
  z-index: 1;
  margin-left: 15px;
+ @media  screen and (max-width:320px){
+    width: 258px;
+  }
 `
 
 function BtnViewOurProjectsAbout(){

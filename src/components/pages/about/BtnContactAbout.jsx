@@ -17,6 +17,9 @@ const MyButton = styled(Button)`
     width: 300px;
     margin-bottom: 2rem;
   }
+  @media  screen and (max-width:320px){
+    width: 258px;
+  }
 `
 
 function BtnContactAbout(){

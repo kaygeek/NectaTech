@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Home from "./components/pages/home/Home";
 import About from "./components/pages/about/About";
@@ -14,9 +15,11 @@ import Necta from "./components/pages/projects/Necta";
 import BloomWeddings from "./components/pages/projects/BloomWeddings";
 import ThankYouCard from "./components/pages/concact/ThankYouCard";
 
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Switch>
         <Route exact path="/" exact component={Home} />
