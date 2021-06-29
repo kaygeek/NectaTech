@@ -12,6 +12,10 @@ const MyButton = styled(Button)`
  border-radius: 2px;
  z-index: 1;
  margin-left: 15px;
+ &:hover {
+      border: gold;
+      color: gold;
+    }
  @media  screen and (max-width:320px){
     width: 258px;
   }
