@@ -12,6 +12,9 @@ const Fram = styled.div`
   height: 320px;
   width: 100%;
   margin-top: 100px;
+  @media  screen and (max-width:543px){
+    height: 260px;
+  }
 `
 
  const BtnContainer = styled.div`
@@ -19,6 +22,12 @@ const Fram = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width:648px){
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-left:1rem;
+  }
  `
 
  const BottomVector = styled.img`

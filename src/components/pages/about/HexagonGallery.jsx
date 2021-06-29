@@ -15,70 +15,88 @@ import img_7 from "./about_images/img_7.svg";
 
 
 const HexagonContainer = styled.div`
-  /* max-width: 100%; */
-  margin-left: -2rem;
-  margin-right: 4rem;
-  max-width: 1010px;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-auto-rows: 200px; 
-  grid-gap: 27px;
-  padding-top: 100px;
-  padding-bottom: 200px;
+  max-width: 80%;
+  margin-left: 12rem;
+  overflow: hidden;
+  margin-top: 4rem;
+  padding-bottom:1rem;
+  
+  @media screen and (max-width:1024px){
+  margin-left: 7rem;
+ }
+  @media  screen and (max-width:768px){
+    max-width: 86%;
+    margin-left: 3rem;
+  }
+  @media screen and (max-width:425px){
+    max-width: 77%;
+    margin-left: 3rem;
+  }
 
- 
+  @media  screen and (max-width:320px){
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
 `
+const Row1 = styled.div`
+ margin-left: 8rem;
+ display: flex;
+ flex-direction: row;
+@media  screen and (max-width:1024px){
+  margin-left: 1rem;
+}
+ @media  screen and (max-width:768px){
+  margin-left: 0rem;
+}
+`
+const Row2 = styled.div`
+ display: flex;
+ flex-direction: row;
+ margin-top:0px;
+ @media  screen and (max-width:425px){
+  margin-top: -10rem;
+ }
+ @media screen and (max-width:320px){
+    padding-bottom: 2rem;
+    margin-top: -2rem; 
+    margin-right: 0rem;
+ }
 
-
+`
 const Hex = styled.div`
   width: 260px;
   height: 275px;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background: none;
-   
-  &:hover {
-  opacity:0.3;
-  color: linear-gradient(0deg, rgba(250, 237, 91, 0.5), rgba(250, 237, 91, 0.5)); 
-  
-}
-  
-  img{
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit:cover;
-    transition: .3s ease;
-    backface-visibility: hidden;
-    
-  } 
- 
-`
 
-
+  @media  screen and (max-width:320px){
+    width: 264px;
+    height: 130px;
+  }
+  `
 
 
 const NameContainer = styled.div`
- width: 100%;
- height: 100%;
+ margin-top: -11rem;
+ width: 69%;
+ margin-left: 3rem;
+ height: 43%;
  display:flex;
  justify-content: center;
  align-items: center;
  padding: 1;
  text-align: center;
+ font-size: 1vw;
+ background-color:yellow;
+ display: none;
 
   &:hover{
-    opacity:1;
+    opacity: 10;
+    z-index: 1;
     filter: linear-gradient(0deg, rgba(250, 237, 91, 0.5), rgba(250, 237, 91, 0.5)); 
   }
  
-
-
 `
-
-
-
-
 
 
 function HexagonGallery() {
@@ -87,9 +105,7 @@ const [card, setcard] = useState("")
 
 
 function HandleClicks(id){
-
   const member = team[id];
-
  setcard( 
  <CardEntry
   id = {member.id}
@@ -100,62 +116,60 @@ function HandleClicks(id){
 />)
 }
 
-  return (
-    <div>
+return (
+  <div>
+    <HexagonContainer className="hexagon-gallery">
+      <Row1>
+          <Hex onClick={(e)=>HandleClicks(0)} key={0} smooth={true}  > 
+             <img src={img_1} alt="Bruce" />        
+             <NameContainer>
+                Bruce Kay
+             </NameContainer>   
+          </Hex>
+          <Hex>
+            <img src={img_2} alt="NectaBee" />
+          </Hex>
 
-      <HexagonContainer className="hexagon-gallery">
-        <Hex onClick={(e)=>HandleClicks(0)} key={0} className="hex" smooth={true}  > 
-          <img src={img_1} alt="Bruce" />        
-          <NameContainer>
-          Bruce Kay
-          </NameContainer>
-          
-            
-        </Hex>
-
-        <Hex className="hex">
-          <img src={img_2} alt="NectaBee" />
-        </Hex>
-
-        <Hex onClick={(e)=>HandleClicks(1)} key={1}  className="hex">
+        <Hex onClick={(e)=>HandleClicks(1)} key={1}  >
           <img src={img_3} alt="Courtney" />
           <NameContainer>
-          Courtney Joote
-          </NameContainer>
-          
+            Courtney Joote
+          </NameContainer>     
         </Hex>
+      </Row1>
 
+      <Row2>
         <Hex onClick={(e)=>HandleClicks(2)} key={2}  className="hex">
-          <img src={img_4} alt="Kgaugelo" />
+            <img src={img_4} alt="Kgaugelo" />
           <NameContainer>
-          Kgaugelo Marakalla
-          </NameContainer>
-          
+             Kgaugelo Marakalla
+          </NameContainer>     
         </Hex>
 
         <Hex onClick={(e)=>HandleClicks(3)} key={3}  className="hex">
-          <img src={img_5} alt="Merveille" />
-          <NameContainer>
-          Merveille Van Eck Kay
-          </NameContainer>
-          
+             <img src={img_5} alt="Merveille" />
+           <NameContainer>
+              Merveille Van Eck Kay
+          </NameContainer>    
         </Hex>
 
         <Hex onClick={(e)=>HandleClicks(4)} key={4}  className="hex">
-          <img src={img_6} alt="Megan" />
-          <NameContainer>
-          Megan Serfontein
-          </NameContainer>
-        
+            <img src={img_6} alt="Megan" />
+            <NameContainer>
+              Megan Serfontein
+            </NameContainer>
         </Hex>
 
         <Hex onClick={(e)=>HandleClicks(5)} key={5}  className="hex">
-          <img src={img_7} alt="Carmyn" />
+            <img src={img_7} alt="Carmyn" />
           <NameContainer>
-          Carmyn vM
+             Carmyn vM
           </NameContainer>
          
         </Hex>
+      </Row2>
+
+       
       </HexagonContainer>    
      {card}
 

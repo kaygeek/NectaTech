@@ -15,6 +15,7 @@ const Frame = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 
 `
 
@@ -29,11 +30,11 @@ const ContentContainer = styled.div`
   align-items: center;
   p {
     width: 70%;
-    height: 116px;
     font-weight: normal;
     font-size: 19px;
     line-height: 158%;
     padding-bottom: 5px;
+    /* s */
   }
 `
 
@@ -46,24 +47,39 @@ const Logo = styled.img`
   width: 270px;
   height: 80px;
   padding-bottom: 2rem;
+  @media screen and (min-width:320px){
+    width: 190px;
+  }
 
 `
 
 const ImageContainer = styled.div`
   width: 70%;
   display: flex;
-  margin-top: 10rem;
+  margin-top: 7rem;
   margin-left: 30rem;
   margin-right: 13rem;
   margin-bottom: 4rem;
+  @media  screen and (max-width:768px){
+    margin-left: 23rem;
+  }
+  @media  screen and (max-width:425px){
+    width: 95%;
+    margin-top: 4rem;
+    margin-left: 20rem;
+  }
+  
+  @media screen and (max-width: 320px){
+    width: 104%;
+    margin-top: 4rem;
+    margin-left: 18rem;
+  }
 
 `
-
 
 const Image1 = styled.img`
   width: 27%;
   height: 30%;
-
 `
 const Image2 = styled.img`
   width: 48%;
@@ -81,6 +97,12 @@ const BtnViewSite = styled(Button)`
   border-radius: 2px;
   border: none;
   z-index: 10;
+  @media  screen and (max-width:320px){
+    width: 221px;
+  }
+  @media  screen and (max-width:425px){
+    width: 255px;
+  }
 `
 
 function PlayPro() {
@@ -92,13 +114,10 @@ function PlayPro() {
       <LogoTitle>
         <Logo src={flat} alt="Playpro  heading logo" />
       </LogoTitle>
+      <p>Where talent meets opportunity!</p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec non massa
-        orci enim. Nec amet mollis eget mauris praesent neque, augue ut.
-        Commodo, leo, sollicitudin velit amet. Ac et tempor lectus gravida
-        senectus enim habitasse quis enim. Vitae integer ullamcorper massa
-        ipsum. Amet, feugiat vitae vitae at sed viverra tempus. Odio habitant
-        nisi congue orci purus facilisis porttitor.
+          PlayPro is a software platform built for Sports Administration at schools, clubs, academies, and universities.
+           It allows Sports Administrators to create profiles of all Players and Coaches within their Organisation, and then link those Players and Coaches to a Sport and Team. Documentation can be added to their profiles, along with images and videos.
       </p>  
       <ImageContainer>
       <Image1 className="img1" src={image12} alt="Vector 16 " />

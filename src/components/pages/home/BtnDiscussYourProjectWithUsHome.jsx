@@ -10,9 +10,9 @@ const MyButton = styled(Button)`
   z-index:10;
   font-size: 18px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
- 
   &:hover {
-    background: #faed5b;
+    background: #333333;
+    border-color: gold;
   }
 
 `

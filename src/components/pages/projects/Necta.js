@@ -10,7 +10,7 @@ import styled from "styled-components";
 import nectap from "./projects_images/necta_imgs/nectap.svg";
 
 
- import image65 from "../concact/contacts_imgs/image65.svg";
+ import image65 from "../contacts/contacts_imgs/image65.svg";
 //  import image66 from "../concact/contacts_imgs/imgae66.svg";
 
 import { Card } from 'antd';
@@ -20,6 +20,7 @@ const Frame = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 
 `
 
@@ -34,11 +35,16 @@ const ContentContainer = styled.div`
   align-items: center;
   p {
     width: 70%;
-    height: 116px;
     font-weight: normal;
     font-size: 19px;
     line-height: 158%;
     padding-bottom: 5px;
+    margin-bottom: 1em;
+    
+  }
+
+  @media  screen and (max-width:320px){
+    font-size: 16px;
   }
 `
 
@@ -52,16 +58,37 @@ const Logo = styled.img`
   width: 270px;
   height: 80px;
   padding-bottom: 2rem;
+  @media  screen and (max-width:425px){
+    width: 232px;
+  }
+  @media  screen and (max-width:320px){
+    width:196px;
+  }
 
 `
 
 const ImageContainer = styled.div`
   width: 70%;
   display: flex;
-  margin-top: 10rem;
-  margin-left: 19rem;
-  /* margin-right: 13rem; */
+  margin-top: 4rem;
+  margin-left: 13rem;
   margin-bottom: 4rem;
+
+
+  @media  screen and (max-width: 768px){
+    margin-left: 5rem;
+  }
+  @media screen and (max-width: 425px){
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 4rem;
+  }
+ @media  screen and (max-width:320px){
+    width: 96%;
+    margin-top: -3rem;
+    margin-bottom: -3rem;
+ }
 
 `
 const BtnViewSite = styled(Button)`
@@ -73,6 +100,13 @@ const BtnViewSite = styled(Button)`
   border-radius: 2px;
   border: none;
   z-index: 10;
+
+  @media  screen and (max-width:320px){
+    width: 221px;
+  }
+  @media  screen and (max-width:425px){
+    width: 255px;
+  }
 `
 
 
@@ -98,13 +132,10 @@ function Necta() {
           <Logo src={Group64} alt="ScrumPro heading logo" />
         </LogoTitle>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec non massa
-          orci enim. Nec amet mollis eget mauris praesent neque, augue ut.
-          Commodo, leo, sollicitudin velit amet. Ac et tempor lectus gravida
-          senectus enim habitasse quis enim. Vitae integer ullamcorper massa
-          ipsum. Amet, feugiat vitae vitae at sed viverra tempus. Odio habitant
-          nisi congue orci purus facilisis porttitor.
+        We provide the platform to track visitor engagement. We help you to successfully capture the leads you need. We bring the best events and specials to you in one space.
+
         </p>  
+        <p>All your events in the palm of your hand with Necta.</p>
         <ImageContainer>
         <Image1 className="img1" src={nectap} alt="Vector 16 " />
         <Image2 className="img2" src={necta1} alt="image 16 " />

@@ -5,17 +5,22 @@ import styeled from "styeled-components";
 
  const BtnViewOurSite = styeled(Button)`
   position: relative;
-  left:550px;
+  left: 550px;
   width: 350px;
   display: flex;
   flex-direction: column;
   alignItems: center;
-  margin-bottom:2rem;,
+  margin-bottom: 2rem;
   padding: 5px 16px;
   background: #241637;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
   border-color: black;
+
+  @media  screen and (max-width: 894px){
+    margin-bottom: 1rem;
+  }
+
  
  `
 

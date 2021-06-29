@@ -31,11 +31,12 @@ const ContentContainer = styled.div`
   align-items: center;
   p {
     width: 70%;
-    height: 116px;
+    /* height: 116px; */
     font-weight: normal;
     font-size: 19px;
     line-height: 158%;
     padding-bottom: 5px;
+    margin-bottom: 1em;
   }
 `
 
@@ -49,10 +50,15 @@ margin-bottom: 4rem;
 
 const Logo = styled.img`
   width: 300px;
-  margin-left: 9rem;
+  margin-left: 8rem;
   padding-bottom: 1rem;
   margin-bottom: -11rem;
-
+  @media  screen and (max-width:2010px){
+    margin-left: 6rem;
+  }
+ @media  screen and (max-width:425px){
+  margin-left: 2rem;
+ }
 `
 
 const ImageContainer = styled.div`
@@ -62,6 +68,27 @@ const ImageContainer = styled.div`
   margin-left: 12rem;
   margin-right: 13rem;
   margin-bottom: 4rem;
+  @media  screen and (max-width:1024px){
+    margin-left: 9rem;
+  }
+  @media  screen and (max-width:784px){
+    margin-left: 10rem;
+    width: 65%;
+  }
+  @media  screen and (max-width:768px){
+  margin-left: 7rem;
+}
+  @media  screen and (max-width:425px){
+    margin-left: 12rem;
+    width: 70%;
+    margin-top: 5rem;
+  }
+  @media  screen and (max-width:320px){
+    width: 81%;
+    margin-top: 3rem;
+}
+
+
 
 `
 
@@ -84,11 +111,13 @@ const BtnViewSite = styled(Button)`
   border-radius: 2px;
   border: none;
   z-index: 10;
+  @media  screen and (max-width:320px){
+    width: 221px;
+  }
+  @media  screen and (max-width:425px){
+    width: 255px;
+  }
 `
-
-
-
-
 
 
 
@@ -102,13 +131,10 @@ function BloomWeddings() {
           <Logo src={Group66} alt=" heading logo" />
         </LogoTitle>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec non massa
-          orci enim. Nec amet mollis eget mauris praesent neque, augue ut.
-          Commodo, leo, sollicitudin velit amet. Ac et tempor lectus gravida
-          senectus enim habitasse quis enim. Vitae integer ullamcorper massa
-          ipsum. Amet, feugiat vitae vitae at sed viverra tempus. Odio habitant
-          nisi congue orci purus facilisis porttitor.
-        </p>  
+        The Bloom Proposal:
+       </p>  
+       <p> Dream. Create. Inspire. Bloom invites you to build and celebrate your magical day with flawless wedding planning that spares no detail. We’ll show you all the ropes to help you tie the knot. And the best news is that Bloom is free!
+        </p>
         <ImageContainer>
         <Image1 className="img1" src={Group1} alt="Vector 16 " />
         <Image2 className="img2" src={smartmockups_knh8mjgh1} alt="image 16 " />

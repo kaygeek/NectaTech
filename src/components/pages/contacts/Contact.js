@@ -11,30 +11,44 @@ const Frame = styled.div`
  /* position:relative; */
  background-color: #E5E5E5;
  width: 100%;
- height:1020px;
+ height: 1320px;
  overflow: hidden;
-
+ @media  screen and (max-width: 765px){
+   height: 1590px;
+ }
+ @media  screen and (max-width: 734px){
+  height: 1790px;
+ }
 `
 
 
 const VectorDiv = styled.div`
  width: 100%;
  overflow: hidden;
- z-index:-1;
+ z-index: -1;
 
 `
 
 const FormBody = styled.div`
  position: absolute;
- margin-top:-25rem; 
- left:40%;
+ margin-top: -25rem; 
+ left: 40%;
  width: 50%;
  padding: 4rem;
  overflow: hidden;
- margin-bottom: 1rem;
+ margin-bottom: 2rem;
  background: #FFFFFF;
- margin-left:2rem;
- 
+ margin-left: 2rem;
+ @media  screen and (max-width:765px){
+  margin-top: 2rem; 
+  width: 80%;
+  left: 5%;
+  
+ }
+
+ @media  screen and (max-width:425px){
+   margin: 1rem;
+ }
 `
 
 const PrivacyTag = styled.div`
@@ -51,7 +65,7 @@ const PrivacyLink = styled(Link)`
 const Content = styled.div`
  margin-top: 3rem;
  margin-left: 5rem;
- margin-right:1.5rem;
+ margin-right: 1.5rem;
  list-style: none;
  width: 30%;
 
@@ -64,6 +78,15 @@ ul{
   font-size: 1rem;
   text-align: left;
   
+}
+
+@media  screen and (max-width:765px){
+  width: 80%;
+  margin-left: 4rem;
+}
+
+@media  screen and (max-width:425px){
+  margin-left: 2rem;
 }
 `
 
@@ -95,11 +118,19 @@ const MyButton = styled(Button)`
  position:relative;
  width: 120px;
  border-radius: 2px;
+ border-color: black;
  margin-top: 1rem;
  background: #333333;
  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+ &:hover {
+    background: #333333;
+    border-color: gold;
+  }
+
 `
+
+
 
 
 
@@ -126,17 +157,18 @@ const Contact = () => {
       <img src={Vector} alt="vector" style={{position:"reletive", width:"300%",}} /> 
       </VectorDiv>
        
+   
 
-       <Content>
+    <Content>
          <h2>Contact Us</h2>
          <ul>
            <Link to=""><li><AiOutlineCheck/>Reason to contact us</li></Link>
            <Link to=""><li><AiOutlineCheck/>Description of what we can do for your company</li></Link>
            <Link to=""><li><AiOutlineCheck/>Reason to contact us</li> </Link>          
          </ul>
-       </Content>
+    </Content>
 
-       
+               
       <FormBody>
       <Form layout="vertical" {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages} >
 
@@ -230,6 +262,9 @@ const Contact = () => {
         </Col>     
       </Form>
       </FormBody>
+   
+   
+       
     </Frame>
   )
 }
