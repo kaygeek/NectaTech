@@ -10,7 +10,7 @@ import styled from "styled-components";
 import nectap from "./projects_images/necta_imgs/nectap.svg";
 
 
- import image65 from "../concact/contacts_imgs/image65.svg";
+ import image65 from "../contacts/contacts_imgs/image65.svg";
 //  import image66 from "../concact/contacts_imgs/imgae66.svg";
 
 import { Card } from 'antd';

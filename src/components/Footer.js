@@ -141,9 +141,9 @@ const Footer = () => {
         </FooterLogo>
         <MainFooterItems>
           <MainFooterLink to="/"> Home </MainFooterLink>       
-          <MainFooterLink to="about"> About </MainFooterLink>      
-          <MainFooterLink to="projects"> Projects </MainFooterLink>               
-          <MainFooterLink to="contact"> Contact </MainFooterLink>
+          <MainFooterLink to="/about"> About </MainFooterLink>      
+          <MainFooterLink to="/projects"> Projects </MainFooterLink>               
+          <MainFooterLink to="/contact"> Contact </MainFooterLink>
         </MainFooterItems>
       </MainFooter>
 
@@ -153,8 +153,8 @@ const Footer = () => {
 
         <ChildFooterItems>
           <ChildFooterLink to="/"> Site Map </ChildFooterLink>       
-          <ChildFooterLink to="about"> Privacy Policy </ChildFooterLink>                   
-          <ChildFooterLink to="contact"> Terms of Use </ChildFooterLink>
+          <ChildFooterLink to="/about"> Privacy Policy </ChildFooterLink>                   
+          <ChildFooterLink to="/contact"> Terms of Use </ChildFooterLink>
         </ChildFooterItems>
       </ChildFooter>
     </footer>  

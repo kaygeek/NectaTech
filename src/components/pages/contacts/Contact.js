@@ -253,7 +253,7 @@ const Contact = () => {
           <PrivacyTag>By clicking “Submit,” I acknowledge receipt of the NectaTech  <PrivacyLink>Privacy Policy.</PrivacyLink> </PrivacyTag>
 
           <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 0 }}>
-            <Link to="/thankyoucard">
+            <Link to="/thank-you">
               <MyButton type="primary" htmlType="submit">
                Submit
               </MyButton>

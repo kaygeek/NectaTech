@@ -4,9 +4,7 @@ import Vector from "./contacts_imgs/Vector.svg";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Group from "./contacts_imgs/Group.svg";
-import image65 from "./contacts_imgs/image65.svg";
-import image66 from "./contacts_imgs/image66.svg";
-import {MdArrowBack} from "react-icons/fa";
+
 
 
 const  Frame = styled.div`
