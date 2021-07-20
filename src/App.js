@@ -28,9 +28,9 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/scrumpro" component={Scrumpro} />
         <Route exact path="/playpro" component={Playpro} />
-        <Route exact path="/necta-track" component={NectaTrack} />
+        <Route exact path="/nectaTrack" component={NectaTrack} />
         <Route exact path="/necta" component={Necta} />
-        <Route exact path="/bloom-weddings" component={BloomWeddings} />
+        <Route exact path="/bloomWeddings" component={BloomWeddings} />
         <Route exact path="/thank-you" component={ThankYouCard} />
       </Switch>
       <Footer />

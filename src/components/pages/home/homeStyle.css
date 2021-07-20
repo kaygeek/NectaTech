@@ -61,8 +61,7 @@ ul.slickdots {
 
 @media screen and (max-width:320px){
   .nav-vector{
-    width: 170%;
-    overflow: hidden;
+    width: 100%;
 
   }
 
